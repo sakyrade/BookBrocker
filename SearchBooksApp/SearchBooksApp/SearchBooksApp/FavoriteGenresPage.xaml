@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchBooksApp.FavoriteGenresPage" Shell.ForegroundColor="Black" Visual="Material" x:Name="favoriteGenres">
+    <Shell.TitleView>
+        <Label FontFamily="HDR" Text="Жанры" TextColor="Black" FontSize="Large" FontAttributes="Bold" VerticalTextAlignment="Center" />
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView BindingContext="{x:Reference favoriteGenres}" ItemsSource="{Binding}"
+                            HorizontalScrollBarVisibility="Always" x:Name="resultSearch" SelectionMode="Single" SelectedItem="{Binding SelectedLabel, Mode=TwoWay}" SelectionChanged="SelectionGenre">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Content="{Binding}">
+                            
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

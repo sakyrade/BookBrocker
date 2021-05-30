@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchBooksApp.BookPage" x:Name="bookPage" Shell.ForegroundColor="Black" Shell.TitleColor="Black" Shell.DisabledColor="Black">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label FontFamily="HDR" Text="О книге" TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+            <Image HorizontalOptions="EndAndExpand" Margin="10,10,20,10" Aspect="AspectFill" Source="frame_favorite_x2" x:Name="addOrDeleteBook">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="AddBook" />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <StackLayout VerticalOptions="CenterAndExpand" Margin="10">
+                    <Frame>
+                        <Grid>
+                            <StackLayout>
+                                <Image Source="{Binding Path=SelectedImage, Source={x:Reference bookPage}}" Aspect="AspectFit" HeightRequest="260" />
+                                <CollectionView SelectionMode="Single" BindingContext="{x:Reference bookPage}" HeightRequest="90" ItemsSource="{Binding}" SelectedItem="{Binding SelectedImage, Mode=TwoWay}"
+                                    HorizontalScrollBarVisibility="Always" x:Name="bookImages" Margin="20">
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Image Aspect="AspectFit" Source="{Binding}" />
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                    <CollectionView.ItemsLayout>
+                                        <GridItemsLayout Orientation="Horizontal" />
+                                    </CollectionView.ItemsLayout>
+                                </CollectionView>
+                                <Label Margin="0,20,0,20" TextColor="Black" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" FontFamily="HDR" FontSize="18" Text="{Binding Path=Book.Title}" BindingContext="{x:Reference bookPage}" />
+                                <StackLayout Margin="0,0,0,20">
+                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.Author, StringFormat='Автор: {0}'}" BindingContext="{x:Reference bookPage}" />
+                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.PublishingHouse, StringFormat='Издательство: {0}'}" BindingContext="{x:Reference bookPage}" />
+                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.Genre, StringFormat='Жанр: {0}'}" BindingContext="{x:Reference bookPage}" />
+                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.ISBN}" BindingContext="{x:Reference bookPage}" />
+                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.YearRelease, StringFormat='Год издания: {0}'}" BindingContext="{x:Reference bookPage}" />
+                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.ClassBook, StringFormat='Тип книги: {0}'}" BindingContext="{x:Reference bookPage}" />
+                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.TypeBook, StringFormat='Формат книги: {0}'}" BindingContext="{x:Reference bookPage}" />
+                                    <Button Margin="0,20,0,0" CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="{Binding Path=SourceAndPrice.Price, StringFormat='Купить за {0} руб.'}"
+                                            Padding="5" BackgroundColor="#E56C44" BindingContext="{x:Reference bookPage}"
+                                            Clicked="OpenFromBrowser" />
+                                    <Frame Margin="5,10,5,5" Padding="0" IsVisible="false" x:Name="sourcesAndPricesBooksFrame">
+                                        <CollectionView HeightRequest="110" Margin="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BindingContext="{x:Reference bookPage}" ItemsSource="{Binding}" SelectionChanged="SourcesAndPricesBooksSelect" SelectionMode="Single"
+                                          x:Name="sourcesAndPricesBooks">
+                                            <CollectionView.Header>
+                                                <Label HorizontalTextAlignment="Center" Padding="10" TextColor="Black" Text="Цены на других сайтах" FontFamily="HDR" />
+                                            </CollectionView.Header>
+                                            <CollectionView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Frame>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label FontFamily="HDR" Text="{Binding Site}" />
+                                                            <Label FontFamily="HDR" HorizontalTextAlignment="Start" HorizontalOptions="EndAndExpand" Text="{Binding Price, StringFormat='{0} руб.'}" />
+                                                        </StackLayout>
+                                                    </Frame>
+                                                </DataTemplate>
+                                            </CollectionView.ItemTemplate>
+                                        </CollectionView>
+                                    </Frame>
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

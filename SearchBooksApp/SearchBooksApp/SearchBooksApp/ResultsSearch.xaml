@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SearchBooksApp"
+             x:Class="SearchBooksApp.ResultsSearch" x:Name="resultsSearch" Shell.ForegroundColor="Black" Shell.TitleColor="Black" Shell.DisabledColor="Black">
+    <Shell.TitleView>
+        <Label FontFamily="HDR" Text="Результаты поиска" TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" />
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator IsRunning="True" x:Name="searchIndicator" VerticalOptions="CenterAndExpand" />
+            <CollectionView BindingContext="{x:Reference resultsSearch}" ItemsSource="{Binding}" IsVisible="false"
+                            HorizontalScrollBarVisibility="Always" x:Name="resultSearch" SelectionMode="Single" SelectedItem="{Binding SelectedBook, Mode=TwoWay}" SelectionChanged="SelectionBook">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Frame CornerRadius="10" BackgroundColor="#666666">
+                                <StackLayout>
+                                    <Image Source="{Binding Path=ImageSource}" />
+                                    <Label TextColor="White" FontSize="13" 
+                                       FontAttributes="Bold" 
+                                       Text="{Binding Path=Title}"
+                                       HorizontalTextAlignment="Center"
+                                       FontFamily="HDR" />
+                                    <Label TextColor="White"
+                                           Text="{Binding Path=Author}"
+                                           HorizontalTextAlignment="Center"
+                                           FontFamily="HDR" />
+                                    <!--<Button Text="Смотреть" Command="{Binding GetBookInfoCommand, Source={x:Reference resultsSearch}}"
+                                            CommandParameter="{Binding Path=SelectedItem, Source={x:Reference resultSearch}}" FontFamily="HDR" BackgroundColor="White" Padding="5" TextColor="Black"
+                                        VerticalOptions="EndAndExpand" />-->
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" />
+                </CollectionView.ItemsLayout>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

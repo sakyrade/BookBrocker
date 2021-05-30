@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchBooksApp.Views.AccountInfoView" Visual="Material" x:Name="accountInfo">
+  <ContentView.Content>
+        <ScrollView>
+            <Grid>
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Frame>
+                        <Grid>
+                            <StackLayout>
+                                <Image Source="frame_account_2x" />
+                                <Label TextColor="Black" HorizontalTextAlignment="Center" Margin="20" FontFamily="HDR" HorizontalOptions="CenterAndExpand" 
+                               FontSize="30" Text="{Binding Path=User.Nickname}" BindingContext="{x:Reference accountInfo}"
+                               FontAttributes="Bold" />
+                                <StackLayout Margin="0,20,0,20">
+                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.DateBirthday, StringFormat='Дата рождения: {0:dd, MMMMM, yyyy}'}" BindingContext="{x:Reference accountInfo}" />
+                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.DateRegistration, StringFormat='Дата регистрации аккаунта: {0}'}" BindingContext="{x:Reference accountInfo}" />
+                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.Sex, StringFormat='Пол: {0}'}" BindingContext="{x:Reference accountInfo}" />
+                                </StackLayout>
+                                <StackLayout Margin="0,10,0,0">
+                                    <Button CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Изменить пароль" Clicked="UpdatePassword" Padding="5" BackgroundColor="#E56C44" />
+                                    <Button CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Изменить аватар" Padding="5" BackgroundColor="#E56C44" />
+                                    <Button CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Уточнить предпочтения" Clicked="SelectGenres" Padding="5" BackgroundColor="#E56C44" />
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>

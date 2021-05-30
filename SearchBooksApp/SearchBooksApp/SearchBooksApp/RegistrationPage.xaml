@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchBooksApp.RegistrationPage"
+             xmlns:views="clr-namespace:SearchBooksApp.Views" Shell.ForegroundColor="Black" Shell.TitleColor="Black" Shell.DisabledColor="Black">
+    <Shell.TitleView>
+        <Label FontFamily="HDR" Text="Регистрация" TextColor="Black" FontSize="Large" FontAttributes="Bold" VerticalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Start" />
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <views:RegistrationView />
+    </ContentPage.Content>
+</ContentPage>

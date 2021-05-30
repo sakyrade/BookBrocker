@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchBooksApp.FavoritePage" Visual="Material" x:Name="favoritePage">
+    <Shell.TitleView>
+        <Label FontFamily="HDR" Text="Избранное" TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="nonAuth" IsVisible="false" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontFamily="HDR" Text="Вы не вошли в свой аккаунт. Пройдите авторизацию и повторите попытку." />
+            <Label x:Name="nonAdded" IsVisible="false"  TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontFamily="HDR" Text="Вы ещё ничего не добавили в список избранного. Поищите книги и добавьте ту, которая Вам понравится!" />
+            <ActivityIndicator IsRunning="True" x:Name="loadingIndicator" VerticalOptions="CenterAndExpand" />
+            <CollectionView SelectionMode="Single" BindingContext="{x:Reference favoritePage}" SelectedItem="{Binding SelectedBook, Mode=TwoWay}" ItemsSource="{Binding}" IsVisible="false"
+                            HorizontalScrollBarVisibility="Always" x:Name="favoriteBooks" SelectionChanged="SelectionBook">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Frame CornerRadius="10" BackgroundColor="#666666">
+                                <StackLayout>
+                                    <Image Source="{Binding Path=ImageSource}" />
+                                    <Label TextColor="White" FontSize="13" 
+                                       FontAttributes="Bold" 
+                                       Text="{Binding Path=Title}"
+                                       HorizontalTextAlignment="Center"
+                                       FontFamily="HDR" />
+                                    <Label TextColor="White"
+                                           Text="{Binding Path=Author}"
+                                           HorizontalTextAlignment="Center"
+                                           FontFamily="HDR" />
+                                    <!--<Button Text="Смотреть" Command="{Binding GetBookInfoCommand, Source={x:Reference resultsSearch}}"
+                                            CommandParameter="{Binding Path=SelectedItem, Source={x:Reference resultSearch}}" FontFamily="HDR" BackgroundColor="White" Padding="5" TextColor="Black"
+                                        VerticalOptions="EndAndExpand" />-->
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" />
+                </CollectionView.ItemsLayout>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

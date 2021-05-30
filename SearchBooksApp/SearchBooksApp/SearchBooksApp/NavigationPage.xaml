@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchBooksApp.MainPage"
+             xmlns:local="clr-namespace:SearchBooksApp"
+             Visual="Material"
+             BackgroundColor="White">
+
+    <TabBar>
+        <Tab Icon="frame_home2_x2" Title="Главная" Route="Home">
+            <ShellContent ContentTemplate="{x:DataTemplate local:HomePage}" />
+        </Tab>
+        <Tab Icon="frame_favorite2_x2" Title="Избранное" Route="Favorite">
+            <ShellContent ContentTemplate="{x:DataTemplate local:FavoritePage}" />
+        </Tab>
+        <Tab Icon="frame_account2_x2" Title="Аккаунт" Route="Account">
+            <ShellContent ContentTemplate="{x:DataTemplate local:AccountPage}" />
+        </Tab>
+        <Tab Icon="frame_settings2_x2" Title="Настройки" Route="Settings">
+            <ShellContent ContentTemplate="{x:DataTemplate local:OptionsPage}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

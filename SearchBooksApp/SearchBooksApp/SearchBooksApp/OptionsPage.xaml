@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchBooksApp.OptionsPage" Visual="Material">
+    <Shell.TitleView>
+        <Label FontFamily="HDR" Text="Настройки" TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnExit" Margin="10" IsVisible="false" Clicked="ExitAccount" VerticalOptions="EndAndExpand" CornerRadius="10" FontFamily="HDR" TextColor="Red" FontSize="14" Text="Выйти из аккаунта" Padding="5" BackgroundColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

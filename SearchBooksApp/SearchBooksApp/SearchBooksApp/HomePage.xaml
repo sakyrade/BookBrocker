@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:booksControls="clr-namespace:SearchBooksApp"
+             xmlns:pn="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="SearchBooksApp.HomePage"
+             Visual="Material"
+             x:Name="homePage">
+    <Shell.SearchHandler>
+        <SearchHandler x:Name="searchHandler" CommandParameter="{Binding Path=Query, Source={x:Reference searchHandler}}"
+            Command="{Binding SearchCommand, Source={x:Reference homePage}}" TextColor="Black" 
+                       Placeholder="Введите название, ISBN или автора книги" FontSize="14" FontFamily="HDR" />
+    </Shell.SearchHandler>
+    <ScrollView>
+        <Grid Margin="0">
+            <StackLayout Margin="20">
+                <Frame Margin="10" HorizontalOptions="CenterAndExpand" Padding="0"
+                   BackgroundColor="White"
+                   CornerRadius="15">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToRecomendedBooks" />
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <StackLayout>
+                            <Image Aspect="AspectFill" Source="books_recomended.jpg" />
+                        </StackLayout>
+                        <StackLayout Padding="20">
+                            <Label Text="Рекомендации" FontSize="28" TextColor="White" FontFamily="HDR" />
+                            <Label Text="Подборка для Вас!" VerticalOptions="EndAndExpand" TextColor="White" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Margin="10" HorizontalOptions="CenterAndExpand" Padding="0"
+                   BackgroundColor="White"
+                   CornerRadius="15">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoToFavoriteBooks" />
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <StackLayout>
+                            <Image Aspect="AspectFill" Source="favorite_books_user.jpg" />
+                        </StackLayout>
+                        <StackLayout Padding="20">
+                            <Label Text="Избранное" FontSize="28" TextColor="Black" FontFamily="HDR" />
+                            <Label Text="То, что Вам когда-либо понравилось." TextColor="Black" VerticalOptions="EndAndExpand" />
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Label Text="Художественная литература" FontSize="22" Margin="20" TextColor="Black" FontFamily="HDR" />
+                <CollectionView SelectionMode="Single" BindingContext="{x:Reference homePage}" HeightRequest="290" ItemsSource="{Binding}" SelectedItem="{Binding SelectedFictionBook, Mode=TwoWay}"
+                            HorizontalScrollBarVisibility="Always" x:Name="fictionBooks" SelectionChanged="SelectionFictionBook" Margin="-20">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10,20">
+                                <Frame CornerRadius="10" BackgroundColor="#666666">
+                                    <StackLayout>
+                                        <Image Source="{Binding Path=ImageSource}" />
+                                        <Label TextColor="White" FontSize="13" 
+                                       FontAttributes="Bold" 
+                                       Text="{Binding Path=Title}"
+                                       HorizontalTextAlignment="Center"
+                                       FontFamily="HDR" />
+                                        <Label TextColor="White"
+                                           Text="{Binding Path=Author}"
+                                           HorizontalTextAlignment="Center"
+                                           FontFamily="HDR" />
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+                </CollectionView>
+                <Label Text="Образование" FontSize="22" Margin="20" TextColor="Black" FontFamily="HDR" />
+                <CollectionView SelectionMode="Single" BindingContext="{x:Reference homePage}" HeightRequest="300" ItemsSource="{Binding}" SelectedItem="{Binding SelectedLessonBook, Mode=TwoWay}"
+                            HorizontalScrollBarVisibility="Always" x:Name="lessonsBooks" SelectionChanged="SelectionLessonBook" Margin="-20">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10,20">
+                                <Frame CornerRadius="10" BackgroundColor="#666666">
+                                    <StackLayout>
+                                        <Image Source="{Binding Path=ImageSource}" />
+                                        <Label TextColor="White" FontSize="13" 
+                                       FontAttributes="Bold" 
+                                       Text="{Binding Path=Title}"
+                                       HorizontalTextAlignment="Center"
+                                       FontFamily="HDR" />
+                                        <Label TextColor="White"
+                                           Text="{Binding Path=Author}"
+                                           HorizontalTextAlignment="Center"
+                                           FontFamily="HDR" />
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Horizontal" />
+                    </CollectionView.ItemsLayout>
+                </CollectionView>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

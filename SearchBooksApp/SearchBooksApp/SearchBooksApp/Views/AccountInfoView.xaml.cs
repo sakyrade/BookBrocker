@@ -41,5 +41,10 @@ namespace SearchBooksApp.Views
             FavoriteGenresPage favoriteGenresPage = new FavoriteGenresPage();
             await Navigation.PushAsync(favoriteGenresPage);
         }
+
+        private async void ExitAccount(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new OutUserPage());
+        }
     }
 }

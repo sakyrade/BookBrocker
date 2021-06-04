@@ -33,6 +33,7 @@ namespace SearchBooksApp
 
             }
 
+            await Task.Delay(7000);
             MainPage = new MainPage();
         }
 

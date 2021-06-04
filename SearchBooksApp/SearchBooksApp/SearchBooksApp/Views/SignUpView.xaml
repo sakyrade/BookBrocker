@@ -49,7 +49,7 @@
 
                                         <StackLayout Orientation="Horizontal" Margin="10">
                                             <Label Text="Пол:" FontSize="20" VerticalOptions="EndAndExpand" Margin="10" FontFamily="HDR" />
-                                            <Picker WidthRequest="110" FontFamily="HDR" BindingContext="{x:Reference signUpView}" SelectedItem="{Binding Path=Sex, Mode=TwoWay}" Unfocused="PickerSex_Unfocused">
+                                            <Picker WidthRequest="110" HorizontalTextAlignment="Center" FontFamily="HDR" BindingContext="{x:Reference signUpView}" SelectedItem="{Binding Path=Sex, Mode=TwoWay}" Unfocused="PickerSex_Unfocused">
                                                 <Picker.Items>
                                                     <x:String>Мужской</x:String>
                                                     <x:String>Женский</x:String>
@@ -58,9 +58,9 @@
                                             </Picker>
                                         </StackLayout>
 
-                                        <StackLayout Orientation="Horizontal" Margin="20">
-                                            <Label Text="Дата рождения:" VerticalOptions="EndAndExpand" FontSize="20" FontFamily="HDR" />
-                                            <DatePicker Margin="0" BindingContext="{x:Reference signUpView}" Date="{Binding DateBirthday, Mode=TwoWay}" Unfocused="DatePickerDateBirthday_Unfocused" />
+                                        <StackLayout Orientation="Horizontal" Margin="10">
+                                            <Label Text="Возраст:" Margin="10" VerticalOptions="EndAndExpand" FontSize="20" FontFamily="HDR" />
+                                            <Entry BindingContext="{x:Reference signUpView}" FontFamily="HDR"  Keyboard="Numeric" HorizontalTextAlignment="Center" WidthRequest="50" Text="{Binding Age, Mode=TwoWay}" Unfocused="EntryAge_Unfocused" />
                                         </StackLayout>
 
                                         <Button Clicked="Register" CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Зарегистрироваться" Padding="5" BackgroundColor="#E56C44" />

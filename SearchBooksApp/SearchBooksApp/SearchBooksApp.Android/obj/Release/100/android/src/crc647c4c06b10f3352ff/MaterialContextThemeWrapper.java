@@ -15,11 +15,34 @@ public class MaterialContextThemeWrapper
 	}
 
 
+	public MaterialContextThemeWrapper ()
+	{
+		super ();
+		if (getClass () == MaterialContextThemeWrapper.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Material.Android.MaterialContextThemeWrapper, Xamarin.Forms.Material", "", this, new java.lang.Object[] {  });
+	}
+
+
+	public MaterialContextThemeWrapper (android.content.Context p0, android.content.res.Resources.Theme p1)
+	{
+		super (p0, p1);
+		if (getClass () == MaterialContextThemeWrapper.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Material.Android.MaterialContextThemeWrapper, Xamarin.Forms.Material", "Android.Content.Context, Mono.Android:Android.Content.Res.Resources+Theme, Mono.Android", this, new java.lang.Object[] { p0, p1 });
+	}
+
+
 	public MaterialContextThemeWrapper (android.content.Context p0, int p1)
 	{
 		super (p0, p1);
 		if (getClass () == MaterialContextThemeWrapper.class)
 			mono.android.TypeManager.Activate ("Xamarin.Forms.Material.Android.MaterialContextThemeWrapper, Xamarin.Forms.Material", "Android.Content.Context, Mono.Android:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1 });
+	}
+
+	public MaterialContextThemeWrapper (android.content.Context p0)
+	{
+		super ();
+		if (getClass () == MaterialContextThemeWrapper.class)
+			mono.android.TypeManager.Activate ("Xamarin.Forms.Material.Android.MaterialContextThemeWrapper, Xamarin.Forms.Material", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
 	}
 
 	private java.util.ArrayList refList;

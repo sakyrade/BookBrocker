@@ -16,9 +16,5 @@
         <Tab Icon="frame_account2_x2" Title="Аккаунт" Route="Account">
             <ShellContent ContentTemplate="{x:DataTemplate local:AccountPage}" />
         </Tab>
-        <Tab Icon="frame_settings2_x2" Title="Настройки" Route="Settings">
-            <ShellContent ContentTemplate="{x:DataTemplate local:OptionsPage}" />
-        </Tab>
     </TabBar>
-
 </Shell>

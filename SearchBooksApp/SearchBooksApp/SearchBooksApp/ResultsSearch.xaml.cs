@@ -97,7 +97,7 @@ namespace SearchBooksApp
             {
                 this.Content = new Label()
                 {
-                    Text = $"Ошибка подключения к серверу.",
+                    Text = "Ошибка подключения к серверу.",
                     TextColor = Color.Black,
                     FontFamily = "HDR",
                     HorizontalTextAlignment = TextAlignment.Center,
@@ -109,7 +109,14 @@ namespace SearchBooksApp
         private async void SelectionBook(object sender, SelectionChangedEventArgs e)
         {
             if (SelectedBook != null)
-                await Navigation.PushAsync(new BookPage(resultSearch.SelectedItem as Book));
+            {
+                var book = resultSearch.SelectedItem as Book;
+
+                if (book.AgeLimit == "16")
+                    await Navigation.PushAsync(new WarningPage(book));
+                else
+                    await Navigation.PushAsync(new BookPage(book));
+            }
 
             resultSearch.SelectedItem = null;
         }

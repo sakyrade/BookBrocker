@@ -17,7 +17,7 @@ namespace SearchBooksApp.Views
         private string password;
         private string passwordRepeat;
         private string sex;
-        private string dateBirthday;
+        private int age;
 
         public string Nickname
         {
@@ -59,13 +59,13 @@ namespace SearchBooksApp.Views
             }
         }
 
-        public string DateBirthday
+        public int Age
         {
-            get { return dateBirthday; }
+            get { return age; }
             set
             {
-                dateBirthday = value;
-                OnPropertyChanged("DateBirthday");
+                age = value;
+                OnPropertyChanged("Age");
             }
         }
 
@@ -120,15 +120,19 @@ namespace SearchBooksApp.Views
             if (string.IsNullOrEmpty(Sex)) return;
         }
 
-        private void DatePickerDateBirthday_Unfocused(object sender, EventArgs e)
+        private void EntryAge_Unfocused(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(DateBirthday)) return;
+            if (!char.IsDigit(Convert.ToChar(Age)) && Age < 14 || Age > 99)
+            {
+                Toast.MakeText(App.Context, "Введен некорректный возраст", ToastLength.Long).Show();
+                Age = 0;
+            }
         }
 
         private async void Register(object sender, EventArgs e)
         {
             //Проверка введённых данных
-            if (string.IsNullOrEmpty(Nickname) || string.IsNullOrEmpty(DateBirthday) || string.IsNullOrEmpty(Sex) ||
+            if (string.IsNullOrEmpty(Nickname) || char.IsWhiteSpace(Convert.ToChar(Age)) || Age == 0 || string.IsNullOrEmpty(Sex) ||
                 string.IsNullOrEmpty(Password) || string.IsNullOrEmpty(PasswordRepeat))
             {
                 Toast.MakeText(App.Context, "Заполнены не все поля", ToastLength.Long).Show();
@@ -141,7 +145,7 @@ namespace SearchBooksApp.Views
             try
             {
                 //При успешной или неудачной регистрации выведется соответствующее сообщение.
-                string message = await Registration.RegistrationUser(Nickname, passwordHash, DateBirthday, Sex);
+                string message = await Registration.RegistrationUser(Nickname, passwordHash, Age, Sex);
                 Toast.MakeText(App.Context, message, ToastLength.Long).Show();
                 await Navigation.PopAsync();
             }

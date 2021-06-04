@@ -1,16 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SearchBooksApp.WallpaperPage" Background="#E56C44">
+             x:Class="SearchBooksApp.WallpaperPage" Background="White">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="CenterAndExpand" 
-                     HorizontalOptions="CenterAndExpand" >
-            <Label Text="BB"
-                   TextColor="White"
-                   FontSize="150"
+        <ScrollView>
+            <StackLayout VerticalOptions="CenterAndExpand" 
+                     HorizontalOptions="CenterAndExpand">
+                <Frame CornerRadius="15" Padding="0" Margin="140,50,140,0">
+                    <Image Source="web_hi_res_512" Aspect="AspectFill" />
+                </Frame>
+                <Label Text="Book Brocker"
+                   TextColor="Black"
+                   FontSize="30"
                    FontAttributes="Italic"
                    FontFamily="HDR"
                    HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

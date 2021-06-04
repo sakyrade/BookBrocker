@@ -88,3 +88,5 @@ C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\Recomen
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\SearchBooksApp.csprojAssemblyReference.cache
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\ProcessPage.xaml.g.cs
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\WallpaperPage.xaml.g.cs
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\OutUserPage.xaml.g.cs
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\WarningPage.xaml.g.cs

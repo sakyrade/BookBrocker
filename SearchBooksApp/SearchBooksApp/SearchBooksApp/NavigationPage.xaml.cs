@@ -13,8 +13,7 @@ namespace SearchBooksApp
     {
         public MainPage()
         {
-            InitializeComponent();
-            DependencyService.Get<IStatusBar>().ShowStatusBar();
+            InitializeComponent();            
         }
 
         /*

@@ -10,11 +10,11 @@ namespace SearchBooksApp
 {
     public abstract class Registration : HostAPI
     {
-        public static async Task<string> RegistrationUser(string nickname, string password, string dateBirthday, string sex)
+        public static async Task<string> RegistrationUser(string nickname, string password, int age, string sex)
         {
             using (var client = new HttpClient())
             {
-                var result = await client.GetStringAsync($"{HOST_NAME}/sign_up?nickname={nickname}&password={password}&sex={sex}&date_birthday={dateBirthday}");
+                var result = await client.GetStringAsync($"{HOST_NAME}/sign_up?nickname={nickname}&password={password}&sex={sex}&age={age}");
                 JObject obj = JObject.Parse(result);
 
                 return obj["message"].ToString();

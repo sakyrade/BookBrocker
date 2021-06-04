@@ -1442,6 +1442,7 @@ int drawable notify_panel_notification_icon_bg 0x7f0700a5
 int drawable test_custom_background 0x7f0700a6
 int drawable tooltip_frame_dark 0x7f0700a7
 int drawable tooltip_frame_light 0x7f0700a8
+int drawable web_hi_res_512 0x7f0700a9
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002

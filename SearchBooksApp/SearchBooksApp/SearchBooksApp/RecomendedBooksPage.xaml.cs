@@ -36,6 +36,7 @@ namespace SearchBooksApp
         {
             base.OnAppearing();
 
+            SelectedBook = null;
             User = User.GetUser();
 
             if (User == null)
@@ -59,7 +60,6 @@ namespace SearchBooksApp
             loadingIndicator.IsVisible = false;
             recomendedBooks.IsVisible = true;
             recomendedBooks.ItemsSource = User.RecomendedBooks;
-            SelectedBook = null;
         }
 
         private async void SelectionBook(object sender, SelectionChangedEventArgs e)

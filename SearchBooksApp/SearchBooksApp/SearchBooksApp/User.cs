@@ -15,7 +15,7 @@ namespace SearchBooksApp
         [JsonIgnore]
         private string nickname;
         [JsonIgnore]
-        private string dateBirthday;
+        private int age;
         [JsonIgnore]
         private string dateRegistration;
         [JsonIgnore]
@@ -58,14 +58,14 @@ namespace SearchBooksApp
             }
         }
 
-        [JsonProperty(PropertyName = "date_birthday")]
-        public string DateBirthday
+        [JsonProperty(PropertyName = "age")]
+        public int Age
         {
-            get { return dateBirthday; }
+            get { return age; }
             set
             {
-                dateBirthday = value;
-                OnPropertyChanged("DateBirthday");
+                age = value;
+                OnPropertyChanged("Age");
             }
         }
 

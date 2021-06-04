@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchBooksApp.WarningPage" x:Name="warningPage" Shell.TabBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Image Source="ic_alert" Aspect="AspectFill" Margin="120,0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            <Label Text="Внимание!" HorizontalTextAlignment="Center" FontFamily="HDR" TextColor="Black" FontSize="30" />
+            <Label Margin="10" Text="Для просмотра данного контента Вам должно быть 18 лет." TextColor="Black" HorizontalTextAlignment="Center" FontFamily="HDR" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            <Button BackgroundColor="Black" Margin="50,5,50,5" Padding="5" CornerRadius="10" Text="Мне есть 18" BindingContext="{x:Reference warningPage}" Command="{Binding GoToBookPage}" TextColor="White" FontFamily="HDR" VerticalOptions="CenterAndExpand" />
+            <Button BackgroundColor="White" Margin="50,5,50,5" Padding="5" CornerRadius="10" Text="Вернуться обратно" BindingContext="{x:Reference warningPage}" Command="{Binding GoToBackPage}" TextColor="Black" FontFamily="HDR" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

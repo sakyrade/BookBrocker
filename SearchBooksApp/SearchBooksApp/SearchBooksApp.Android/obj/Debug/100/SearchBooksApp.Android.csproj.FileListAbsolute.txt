@@ -1895,7 +1895,6 @@ C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\mipmap
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\mipmap-mdpi\ic_launcher_foreground.png
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\mipmap-xhdpi\ic_launcher_foreground.png
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\mipmap-xxhdpi\ic_launcher_foreground.png
-C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\mipmap-xxxhdpi\ic_launcher_foreground.png
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\bin\Debug\com.companyname.bookbrocker.apk
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\bin\Debug\com.companyname.bookbrocker.aab
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\bin\Debug\com.companyname.bookbrocker-Signed.aab
@@ -1912,3 +1911,6 @@ C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\bin\Debug\SearchBooksApp
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\bin\Debug\SearchBooksApp.Android.pdb
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\SearchBooksApp.Android.dll
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\SearchBooksApp.Android.pdb
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\mipmap-xxxhdpi\ic_launcher_foreground.png
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\drawable\web_hi_res_512.png
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\drawable\ic_alert.png

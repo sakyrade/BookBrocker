@@ -1,6 +1,7 @@
 ﻿using Android.Widget;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SearchBooksApp.Droid;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,12 +18,34 @@ namespace SearchBooksApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : ContentPage
     {
+        private bool isRefreshing;
         private Book selectedFictionBook;
         private Book selectedLessonBook;
         private List<Book> fictionBooksList;
         private List<Book> lessonsBooksList;
 
         public string TextQuery { get; set; }
+
+        public ICommand UpdateHomePage => new Command(() => {
+            homeBooksListsIndicator.IsRunning = true;
+            homeBooksListsIndicator.IsVisible = true;
+            errorLabel.IsVisible = false;
+            homeBooksLists.IsVisible = false;
+            fictionBooksList = null;
+            lessonsBooksList = null;
+            OnAppearing();
+            IsRefreshing = false;
+        });
+
+        public bool IsRefreshing
+        {
+            get { return isRefreshing; }
+            set
+            {
+                isRefreshing = value;
+                OnPropertyChanged("IsRefreshing");
+            }
+        }
 
         public Book SelectedFictionBook
         {
@@ -52,20 +75,45 @@ namespace SearchBooksApp
         public HomePage()
         {
             InitializeComponent();
+            DependencyService.Get<IStatusBar>().ShowStatusBar();
         }
 
         protected async override void OnAppearing()
         {
             base.OnAppearing();
 
-            if (fictionBooksList == null)
-                fictionBooksList = await SearchBooks.GetBooksForHomePage("Художественная литература");
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                homeBooksListsIndicator.IsRunning = false;
+                homeBooksListsIndicator.IsVisible = false;
+                errorLabel.Text = "Отсутствует подключение к Интернету.";
+                errorLabel.IsVisible = true;
+                return;
+            }
 
-            if (lessonsBooksList == null)
-                lessonsBooksList = await SearchBooks.GetBooksForHomePage("Образование");
+            try
+            {
+                if (fictionBooksList == null)
+                    fictionBooksList = await SearchBooks.GetBooksForHomePage("Художественная литература");
 
-            fictionBooks.ItemsSource = fictionBooksList;
-            lessonsBooks.ItemsSource = lessonsBooksList;
+                if (lessonsBooksList == null)
+                    lessonsBooksList = await SearchBooks.GetBooksForHomePage("Образование");
+
+
+                fictionBooks.ItemsSource = fictionBooksList;
+                lessonsBooks.ItemsSource = lessonsBooksList;
+                homeBooksLists.IsVisible = true;
+            }
+            catch (Java.Net.SocketTimeoutException)
+            {
+                errorLabel.Text = "Ошибка подключения к серверу. Повторите попытку.";
+                errorLabel.IsVisible = true;
+            }
+            finally
+            {
+                homeBooksListsIndicator.IsRunning = false;
+                homeBooksListsIndicator.IsVisible = false;
+            }
 
             SelectedFictionBook = null;
             SelectedLessonBook = null;
@@ -85,13 +133,23 @@ namespace SearchBooksApp
         private async void SelectionFictionBook(object sender, SelectionChangedEventArgs e)
         {
             if (SelectedFictionBook != null)
-                await Navigation.PushAsync(new BookPage(SelectedFictionBook));
+            {
+                if (SelectedFictionBook.AgeLimit == "16")
+                    await Navigation.PushAsync(new WarningPage(SelectedFictionBook));
+                else
+                    await Navigation.PushAsync(new BookPage(SelectedFictionBook));
+            }
         }
 
         private async void SelectionLessonBook(object sender, SelectionChangedEventArgs e)
         {
             if (SelectedLessonBook != null)
-                await Navigation.PushAsync(new BookPage(SelectedLessonBook));
+            {
+                if (SelectedLessonBook.AgeLimit == "16")
+                    await Navigation.PushAsync(new WarningPage(SelectedLessonBook));
+                else
+                    await Navigation.PushAsync(new BookPage(SelectedLessonBook));
+            }
         }
     }
 }

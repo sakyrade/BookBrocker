@@ -29,3 +29,6 @@ C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Release\netstandard2.0\Searc
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Release\netstandard2.0\SearchBooksApp.dll
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Release\netstandard2.0\ref\SearchBooksApp.dll
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Release\netstandard2.0\SearchBooksApp.pdb
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Release\netstandard2.0\OutUserPage.xaml.g.cs
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Release\netstandard2.0\ProcessPage.xaml.g.cs
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Release\netstandard2.0\WallpaperPage.xaml.g.cs

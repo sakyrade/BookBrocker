@@ -37,6 +37,7 @@
                                     <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.PublishingHouse, StringFormat='Издательство: {0}'}" BindingContext="{x:Reference bookPage}" />
                                     <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.Genre, StringFormat='Жанр: {0}'}" BindingContext="{x:Reference bookPage}" />
                                     <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.ISBN}" BindingContext="{x:Reference bookPage}" />
+                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.AgeLimit, StringFormat='Возрастное ограничение: {0}'}" BindingContext="{x:Reference bookPage}" />
                                     <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.YearRelease, StringFormat='Год издания: {0}'}" BindingContext="{x:Reference bookPage}" />
                                     <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.ClassBook, StringFormat='Тип книги: {0}'}" BindingContext="{x:Reference bookPage}" />
                                     <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=Book.TypeBook, StringFormat='Формат книги: {0}'}" BindingContext="{x:Reference bookPage}" />

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -106,6 +106,12 @@ namespace SearchBooksApp
 
         private async void UpdatePassword(object sender, EventArgs e)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Toast.MakeText(App.Context, "Отсутствует подключение к Интернету", ToastLength.Long).Show();
+                return;
+            }
+
             if (string.IsNullOrEmpty(OldPassword) || string.IsNullOrEmpty(NewPassword) || string.IsNullOrEmpty(PasswordRepeat))
             {
                 Toast.MakeText(App.Context, "Заполнены не все поля", ToastLength.Long).Show();
@@ -118,7 +124,16 @@ namespace SearchBooksApp
             {
                 password = Crypto.CreateHashCode(NewPassword)
             };
-            await UsersOperations.UpdateUserData(user.Id, data);
+
+            try
+            {
+                await UsersOperations.UpdateUserData(user.Id, data);
+            }
+            catch (Java.Net.SocketTimeoutException)
+            {
+                Toast.MakeText(App.Context, "Ошибка подключения к серверу.", ToastLength.Long).Show();
+                return;
+            }
             Toast.MakeText(App.Context, "Пароль изменен", ToastLength.Long).Show();
             await Navigation.PopAsync();
         }

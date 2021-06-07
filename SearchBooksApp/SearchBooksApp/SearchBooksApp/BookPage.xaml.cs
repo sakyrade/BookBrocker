@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Android.Widget;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -93,10 +94,15 @@ namespace SearchBooksApp
 
         private async void AddBook(object sender, EventArgs e)
         {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Android.Widget.Toast.MakeText(App.Context, "Отсутствует подключение к Интернету", Android.Widget.ToastLength.Long).Show();
+                return;
+            }
 
             if (user == null)
             {
-                Android.Widget.Toast.MakeText(Android.App.Application.Context, "Войдите в аккаунт или зарегистрируйтесь", Android.Widget.ToastLength.Long);
+                Android.Widget.Toast.MakeText(App.Context, "Войдите в аккаунт или зарегистрируйтесь", Android.Widget.ToastLength.Long).Show();
                 await Shell.Current.GoToAsync($"//Account");
                 return;
             }
@@ -104,24 +110,30 @@ namespace SearchBooksApp
             bookExists = user.SelectedBooks.Where(b => b == Book).FirstOrDefault();
 
             //User oldUser = User.GetUser(user);
-            
-            if (bookExists == null)
+            try
             {
-                user.SelectedBooks.Add(Book);
-                addOrDeleteBook.Source = "frame_favorite2_x2";
-            }
-            else
-            {
-                user.SelectedBooks.Remove(Book);
-                addOrDeleteBook.Source = "frame_favorite_x2";
-            }
+                if (bookExists == null)
+                {
+                    user.SelectedBooks.Add(Book);
+                    addOrDeleteBook.Source = "frame_favorite2_x2";
+                }
+                else
+                {
+                    user.SelectedBooks.Remove(Book);
+                    addOrDeleteBook.Source = "frame_favorite_x2";
+                }
 
-            object data = new
-            {
-                selected_books = user.SelectedBooks
-            };
+                object data = new
+                {
+                    selected_books = user.SelectedBooks
+                };
 
-            await UsersOperations.UpdateUserData(user.Id, data);
+                await UsersOperations.UpdateUserData(user.Id, data);
+            }
+            catch (System.Net.WebException)
+            {
+                Toast.MakeText(App.Context, "Сервер недоступен", ToastLength.Long).Show();
+            }
         }
 
         protected override async void OnDisappearing()

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Android.Widget;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -53,13 +55,33 @@ namespace SearchBooksApp
 
             if (User.SelectedBooks.Count != 0)
             {
-                JObject response = await UsersOperations.UpdateUserData(User.Id);
+                try
+                {
+                    if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+                    {
+                        JObject response = await UsersOperations.UpdateUserData(User.Id);
 
-                if (response != null)
-                    User.SelectedBooks = JsonConvert.DeserializeObject<List<Book>>(response["selected_books"].ToString());
+                        if (response != null)
+                            User.SelectedBooks = JsonConvert.DeserializeObject<List<Book>>(response["selected_books"].ToString());
+                    }
+                    else
+                        Toast.MakeText(App.Context, "Проверьте подключение к Интернету", ToastLength.Long).Show();
 
-                favoriteBooks.ItemsSource = User.SelectedBooks;
-                favoriteBooks.IsVisible = true;
+                    favoriteBooks.ItemsSource = User.SelectedBooks;
+                    favoriteBooks.IsVisible = true;
+                }
+                catch (Java.Net.SocketTimeoutException)
+                {
+                    this.Content = new Label()
+                    {
+                        Text = "Ошибка подключения к серверу.",
+                        TextColor = Color.Black,
+                        FontFamily = "HDR",
+                        HorizontalTextAlignment = TextAlignment.Center,
+                        VerticalOptions = LayoutOptions.CenterAndExpand
+                    };
+                    return;
+                }
             }
             else
                 nonAdded.IsVisible = true;
@@ -70,7 +92,12 @@ namespace SearchBooksApp
         private async void SelectionBook(object sender, SelectionChangedEventArgs e)
         {
             if (SelectedBook != null)
-                await Navigation.PushAsync(new BookPage(SelectedBook));
+            {
+                if (SelectedBook.AgeLimit == "18")
+                    await Navigation.PushAsync(new WarningPage(SelectedBook));
+                else
+                    await Navigation.PushAsync(new BookPage(SelectedBook));
+            }
         }
     }
 }

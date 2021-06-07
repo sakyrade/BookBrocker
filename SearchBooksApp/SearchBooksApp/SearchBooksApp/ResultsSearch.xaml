@@ -16,15 +16,16 @@
                         <Grid Padding="10">
                             <Frame CornerRadius="10" BackgroundColor="#666666">
                                 <StackLayout>
-                                    <Image Source="{Binding Path=ImageSource}" />
+                                    <Image HeightRequest="180" Source="{Binding Path=ImageSource}" />
                                     <Label TextColor="White" FontSize="13" 
                                        FontAttributes="Bold" 
                                        Text="{Binding Path=Title}"
                                        HorizontalTextAlignment="Center"
-                                       FontFamily="HDR" />
+                                       FontFamily="HDR" VerticalOptions="EndAndExpand" />
                                     <Label TextColor="White"
                                            Text="{Binding Path=Author}"
                                            HorizontalTextAlignment="Center"
+                                           VerticalOptions="End"
                                            FontFamily="HDR" />
                                     <!--<Button Text="Смотреть" Command="{Binding GetBookInfoCommand, Source={x:Reference resultsSearch}}"
                                             CommandParameter="{Binding Path=SelectedItem, Source={x:Reference resultSearch}}" FontFamily="HDR" BackgroundColor="White" Padding="5" TextColor="Black"

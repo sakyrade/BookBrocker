@@ -55,23 +55,23 @@
                                 <ActivityIndicator IsRunning="True" Margin="30" IsVisible="True" x:Name="homeBooksListsIndicator" VerticalOptions="CenterAndExpand" />
                                 <StackLayout Margin="25" IsVisible="False" x:Name="homeBooksLists" Padding="-25">
                                     <Label Text="Художественная литература" FontSize="22" Margin="20" TextColor="Black" FontFamily="HDR" />
-                                    <CollectionView SelectionMode="Single" BindingContext="{x:Reference homePage}" HeightRequest="290" ItemsSource="{Binding}" SelectedItem="{Binding SelectedFictionBook, Mode=TwoWay}"
+                                    <CollectionView SelectionMode="Single" BindingContext="{x:Reference homePage}" HeightRequest="380" ItemsSource="{Binding}" SelectedItem="{Binding SelectedFictionBook, Mode=TwoWay}"
                             HorizontalScrollBarVisibility="Always" x:Name="fictionBooks" SelectionChanged="SelectionFictionBook" Margin="-20">
                                         <CollectionView.ItemTemplate>
                                             <DataTemplate>
                                                 <Grid Padding="10,20">
-                                                    <Frame CornerRadius="10" BackgroundColor="#666666">
+                                                    <Frame WidthRequest="200" CornerRadius="10" BackgroundColor="#666666">
                                                         <StackLayout>
-                                                            <Image Source="{Binding Path=ImageSource}" />
+                                                            <Image Source="{Binding Path=ImageSource}" HeightRequest="180" VerticalOptions="CenterAndExpand" />
                                                             <Label TextColor="White" FontSize="13" 
                                        FontAttributes="Bold" 
                                        Text="{Binding Path=Title}"
                                        HorizontalTextAlignment="Center"
-                                       FontFamily="HDR" />
+                                       FontFamily="HDR" VerticalOptions="EndAndExpand" />
                                                             <Label TextColor="White"
                                            Text="{Binding Path=Author}"
                                            HorizontalTextAlignment="Center"
-                                           FontFamily="HDR" />
+                                           FontFamily="HDR" VerticalOptions="End" />
                                                         </StackLayout>
                                                     </Frame>
                                                 </Grid>
@@ -82,23 +82,23 @@
                                         </CollectionView.ItemsLayout>
                                     </CollectionView>
                                     <Label Text="Образование" FontSize="22" Margin="20" TextColor="Black" FontFamily="HDR" />
-                                    <CollectionView SelectionMode="Single" BindingContext="{x:Reference homePage}" HeightRequest="300" ItemsSource="{Binding}" SelectedItem="{Binding SelectedLessonBook, Mode=TwoWay}"
+                                    <CollectionView SelectionMode="Single" BindingContext="{x:Reference homePage}" HeightRequest="380" ItemsSource="{Binding}" SelectedItem="{Binding SelectedLessonBook, Mode=TwoWay}"
                             HorizontalScrollBarVisibility="Always" x:Name="lessonsBooks" SelectionChanged="SelectionLessonBook" Margin="-20">
                                         <CollectionView.ItemTemplate>
                                             <DataTemplate>
                                                 <Grid Padding="10,20">
-                                                    <Frame CornerRadius="10" BackgroundColor="#666666">
+                                                    <Frame WidthRequest="200" CornerRadius="10" BackgroundColor="#666666">
                                                         <StackLayout>
-                                                            <Image Source="{Binding Path=ImageSource}" />
+                                                            <Image Source="{Binding Path=ImageSource}" HeightRequest="180" VerticalOptions="CenterAndExpand" />
                                                             <Label TextColor="White" FontSize="13" 
                                        FontAttributes="Bold" 
                                        Text="{Binding Path=Title}"
                                        HorizontalTextAlignment="Center"
-                                       FontFamily="HDR" />
+                                       FontFamily="HDR" VerticalOptions="EndAndExpand" />
                                                             <Label TextColor="White"
                                            Text="{Binding Path=Author}"
                                            HorizontalTextAlignment="Center"
-                                           FontFamily="HDR" />
+                                           FontFamily="HDR" VerticalOptions="End" />
                                                         </StackLayout>
                                                     </Frame>
                                                 </Grid>

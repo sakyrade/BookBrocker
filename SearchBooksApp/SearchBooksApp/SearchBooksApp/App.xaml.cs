@@ -1,7 +1,10 @@
 ﻿using Android.Content;
+using Android.Widget;
 using SearchBooksApp.Droid;
 using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -25,24 +28,31 @@ namespace SearchBooksApp
 
             try
             {
-                if (!string.IsNullOrEmpty(App.Current.Properties["auth_token"].ToString()))
-                    await Authorization.Auth(App.Current.Properties["auth_token"].ToString());
+                if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+                {
+                    object token;
+
+                    if (App.Current.Properties.TryGetValue("auth_token", out token))
+                        await Authorization.Auth(token.ToString());
+                }
             }
-            catch
+            catch (System.Net.WebException)
             {
 
             }
 
             await Task.Delay(7000);
-            MainPage = new MainPage();
+            MainPage = new MainPage();            
         }
 
         protected override void OnSleep()
         {
+
         }
 
         protected override void OnResume()
         {
+
         }
     }
 }

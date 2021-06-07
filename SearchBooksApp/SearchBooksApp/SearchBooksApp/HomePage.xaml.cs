@@ -26,7 +26,22 @@ namespace SearchBooksApp
 
         public string TextQuery { get; set; }
 
-        public ICommand UpdateHomePage => new Command(() => {
+        public ICommand UpdateHomePage => new Command(async () => {
+            try
+            {
+                if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+                {
+                    object token;
+
+                    if (App.Current.Properties.TryGetValue("auth_token", out token))
+                        await Authorization.Auth(token.ToString());
+                }
+            }
+            catch (System.Net.WebException)
+            {
+
+            }
+
             homeBooksListsIndicator.IsRunning = true;
             homeBooksListsIndicator.IsVisible = true;
             errorLabel.IsVisible = false;
@@ -86,6 +101,7 @@ namespace SearchBooksApp
             {
                 homeBooksListsIndicator.IsRunning = false;
                 homeBooksListsIndicator.IsVisible = false;
+                homeBooksLists.IsVisible = false;
                 errorLabel.Text = "Отсутствует подключение к Интернету.";
                 errorLabel.IsVisible = true;
                 return;
@@ -103,6 +119,11 @@ namespace SearchBooksApp
                 fictionBooks.ItemsSource = fictionBooksList;
                 lessonsBooks.ItemsSource = lessonsBooksList;
                 homeBooksLists.IsVisible = true;
+            }
+            catch (System.Net.WebException)
+            {
+                errorLabel.Text = "Сервер недоступен.";
+                errorLabel.IsVisible = true;
             }
             catch (Java.Net.SocketTimeoutException)
             {
@@ -134,7 +155,7 @@ namespace SearchBooksApp
         {
             if (SelectedFictionBook != null)
             {
-                if (SelectedFictionBook.AgeLimit == "16")
+                if (SelectedFictionBook.AgeLimit == "18")
                     await Navigation.PushAsync(new WarningPage(SelectedFictionBook));
                 else
                     await Navigation.PushAsync(new BookPage(SelectedFictionBook));
@@ -145,7 +166,7 @@ namespace SearchBooksApp
         {
             if (SelectedLessonBook != null)
             {
-                if (SelectedLessonBook.AgeLimit == "16")
+                if (SelectedLessonBook.AgeLimit == "18")
                     await Navigation.PushAsync(new WarningPage(SelectedLessonBook));
                 else
                     await Navigation.PushAsync(new BookPage(SelectedLessonBook));

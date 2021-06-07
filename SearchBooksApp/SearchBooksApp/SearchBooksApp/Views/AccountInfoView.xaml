@@ -5,26 +5,23 @@
   <ContentView.Content>
         <ScrollView>
             <Grid>
-                <StackLayout VerticalOptions="CenterAndExpand">
-                    <Frame>
-                        <Grid>
-                            <StackLayout>
-                                <Label TextColor="Black" HorizontalTextAlignment="Center" Margin="20" FontFamily="HDR" HorizontalOptions="CenterAndExpand" 
-                                       FontSize="30" Text="{Binding Path=User.Nickname}" BindingContext="{x:Reference accountInfo}"
-                                       FontAttributes="Bold" />
-                                <StackLayout Margin="0,20,0,20">
-                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.Age, StringFormat='Возраст: {0}'}" BindingContext="{x:Reference accountInfo}" />
-                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.DateRegistration, StringFormat='Дата регистрации аккаунта: {0}'}" BindingContext="{x:Reference accountInfo}" />
-                                    <Label TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.Sex, StringFormat='Пол: {0}'}" BindingContext="{x:Reference accountInfo}" />
-                                </StackLayout>
-                                <StackLayout Margin="0,10,0,0">
-                                    <Button CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Изменить пароль" Clicked="UpdatePassword" Padding="5" BackgroundColor="#E56C44" />
-                                    <Button CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Уточнить предпочтения" Clicked="SelectGenres" Padding="5" BackgroundColor="#E56C44" />
-                                    <Button Margin="0,2,0,0" Clicked="ExitAccount" CornerRadius="10" FontFamily="HDR" TextColor="Red" FontSize="14" Text="Выйти из аккаунта" Padding="5" BorderColor="Black" BackgroundColor="White" />
-                                </StackLayout>
-                            </StackLayout>
-                        </Grid>
-                    </Frame>
+                <StackLayout>
+                    <StackLayout Padding="0" VerticalOptions="StartAndExpand">
+                        <Image  />
+                        <Label TextColor="Black" HorizontalTextAlignment="Center" Margin="20" FontFamily="HDR" HorizontalOptions="CenterAndExpand" 
+                                            FontSize="30" Text="{Binding Path=User.Nickname}" BindingContext="{x:Reference accountInfo}"
+                                            FontAttributes="Bold" />
+                    </StackLayout>
+                    <StackLayout VerticalOptions="CenterAndExpand" Margin="10">
+                        <Label Margin="10,0" TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.Age, StringFormat='Возраст: {0}'}" BindingContext="{x:Reference accountInfo}" />
+                        <Label Margin="10,0" TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.DateRegistration, StringFormat='Дата регистрации аккаунта: {0}'}" BindingContext="{x:Reference accountInfo}" />
+                        <Label Margin="10,0" TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.Sex, StringFormat='Пол: {0}'}" BindingContext="{x:Reference accountInfo}" />
+                    </StackLayout>
+                    <StackLayout VerticalOptions="EndAndExpand"  Margin="10,20">
+                        <Button CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Изменить пароль" Clicked="UpdatePassword" Padding="5" BackgroundColor="#E56C44" />
+                        <Button CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Уточнить предпочтения" Clicked="SelectGenres" Padding="5" BackgroundColor="#E56C44" />
+                        <Button Margin="0,2,0,0" Clicked="ExitAccount" CornerRadius="10" FontFamily="HDR" TextColor="Red" FontSize="14" Text="Выйти из аккаунта" Padding="5" BorderColor="Black" BackgroundColor="White" />
+                    </StackLayout>
                 </StackLayout>
             </Grid>
         </ScrollView>

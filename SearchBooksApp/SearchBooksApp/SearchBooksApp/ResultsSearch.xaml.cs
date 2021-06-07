@@ -81,12 +81,24 @@ namespace SearchBooksApp
                             search_history = user.SearchHistory
                         };
 
-                        await UsersOperations.UpdateUserData(user.Id, data);
+                        if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+                            await UsersOperations.UpdateUserData(user.Id, data);
                     }
                 }
                 else this.Content = new Label()
                 {
                     Text = $"Результатов по запросу \"{Query}\" не найдено.",
+                    TextColor = Color.Black,
+                    FontFamily = "HDR",
+                    HorizontalTextAlignment = TextAlignment.Center,
+                    VerticalOptions = LayoutOptions.CenterAndExpand
+                };
+            }
+            catch (System.Net.WebException)
+            {
+                this.Content = new Label()
+                {
+                    Text = "Сервер недоступен.",
                     TextColor = Color.Black,
                     FontFamily = "HDR",
                     HorizontalTextAlignment = TextAlignment.Center,
@@ -112,7 +124,7 @@ namespace SearchBooksApp
             {
                 var book = resultSearch.SelectedItem as Book;
 
-                if (book.AgeLimit == "16")
+                if (book.AgeLimit == "18")
                     await Navigation.PushAsync(new WarningPage(book));
                 else
                     await Navigation.PushAsync(new BookPage(book));

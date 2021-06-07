@@ -14,19 +14,16 @@ namespace SearchBooksApp
 	{
 		private Book book;
 
-		public ICommand GoToBookPage => new Command(async () => await Navigation.PushAsync(new BookPage(book)));
-		public ICommand GoToBackPage => new Command(async () => await Navigation.PopAsync());
+		public ICommand GoToBookPage => new Command(async () => {
+			await Navigation.PushAsync(new BookPage(book));
+			Navigation.RemovePage(this);
+		});
 
 		public WarningPage (Book book)
 		{
-			InitializeComponent ();
+			InitializeComponent();
 
 			this.book = book;
 		}
-
-        protected override bool OnBackButtonPressed()
-        {
-			return true;
-        }
-	}
+    }
 }

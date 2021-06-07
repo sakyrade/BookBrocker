@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -125,6 +125,12 @@ namespace SearchBooksApp
         private async void SelectionGenre(object sender, SelectionChangedEventArgs e)
         {
             //var oldUser = User.GetUser(user);
+
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Android.Widget.Toast.MakeText(App.Context, "Отсутствует подключение к Интернету", Android.Widget.ToastLength.Long).Show();
+                return;
+            }
 
             if (SelectedLabel == null) return;
 

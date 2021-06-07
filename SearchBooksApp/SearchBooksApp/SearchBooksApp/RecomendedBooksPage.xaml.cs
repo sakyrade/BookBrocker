@@ -65,7 +65,12 @@ namespace SearchBooksApp
         private async void SelectionBook(object sender, SelectionChangedEventArgs e)
         {
             if (SelectedBook != null)
-                await Navigation.PushAsync(new BookPage(SelectedBook));
+            {
+                if (SelectedBook.AgeLimit == "18")
+                    await Navigation.PushAsync(new WarningPage(SelectedBook));
+                else
+                    await Navigation.PushAsync(new BookPage(SelectedBook));
+            }
         }
     }
 }

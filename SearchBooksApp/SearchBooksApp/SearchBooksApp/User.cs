@@ -15,8 +15,6 @@ namespace SearchBooksApp
         [JsonIgnore]
         private string nickname;
         [JsonIgnore]
-        private int age;
-        [JsonIgnore]
         private string dateRegistration;
         [JsonIgnore]
         private string sex;
@@ -30,6 +28,8 @@ namespace SearchBooksApp
         private List<Book> recomendedBooks;
         [JsonIgnore]
         private List<string> searchHistory;
+        [JsonIgnore]
+        private List<Book> viewingBooks;
         [JsonIgnore]
         private string recomendedDate;
         //Применение паттерна Singleton.
@@ -55,17 +55,6 @@ namespace SearchBooksApp
             {
                 nickname = value;
                 OnPropertyChanged("Nickname");
-            }
-        }
-
-        [JsonProperty(PropertyName = "age")]
-        public int Age
-        {
-            get { return age; }
-            set
-            {
-                age = value;
-                OnPropertyChanged("Age");
             }
         }
 
@@ -154,6 +143,17 @@ namespace SearchBooksApp
             {
                 searchHistory = value;
                 OnPropertyChanged("SearchHistory");
+            }
+        }
+
+        [JsonProperty(PropertyName = "viewing_books")]
+        public List<Book> ViewingBooks
+        {
+            get { return viewingBooks; }
+            set
+            {
+                viewingBooks = value;
+                OnPropertyChanged("ViewingBooks");
             }
         }
 

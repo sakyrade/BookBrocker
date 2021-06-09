@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<zxing:ZXingScannerPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SearchBooksApp.ScannerPage"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms" IsScanning="True" OnScanResult="OnScanBookResult">
+    <Shell.TitleView>
+        <Label FontFamily="HDR" Text="Сканер" TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+    </Shell.TitleView>
+</zxing:ZXingScannerPage>

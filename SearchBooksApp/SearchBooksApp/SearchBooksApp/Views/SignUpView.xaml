@@ -58,11 +58,6 @@
                                             </Picker>
                                         </StackLayout>
 
-                                        <StackLayout Orientation="Horizontal" Margin="10">
-                                            <Label Text="Возраст:" Margin="10" VerticalOptions="EndAndExpand" FontSize="20" FontFamily="HDR" />
-                                            <Entry BindingContext="{x:Reference signUpView}" FontFamily="HDR"  Keyboard="Numeric" HorizontalTextAlignment="Center" WidthRequest="50" Text="{Binding Age, Mode=TwoWay}" Unfocused="EntryAge_Unfocused" />
-                                        </StackLayout>
-
                                         <Button Clicked="Register" CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Зарегистрироваться" Padding="5" BackgroundColor="#E56C44" />
 
                                     </StackLayout>

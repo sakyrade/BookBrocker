@@ -25,6 +25,21 @@ namespace SearchBooksApp
             }
         }
 
+        public static async Task<List<Book>> SearchByISBN(string isbn)
+        {
+            using (var client = new HttpClient() { Timeout = TimeSpan.FromSeconds(900) })
+            {
+                var stringResult = await client.GetStringAsync($"{HOST_NAME}/books_search_by_isbn?isbn={isbn}");
+                JObject obj = JObject.Parse(stringResult);
+                if (obj["books"].Path.Length != 0)
+                {
+                    return JsonConvert.DeserializeObject<List<Book>>(obj["books"].ToString());
+                }
+                else
+                    return null;
+            }
+        }
+
         public static async Task<List<Book>> GetBooksForHomePage(string genre)
         {
             using (var client = new HttpClient() { Timeout = TimeSpan.FromSeconds(900) })

@@ -13,8 +13,14 @@
         <Tab Icon="frame_favorite2_x2" Title="Избранное" Route="Favorite">
             <ShellContent ContentTemplate="{x:DataTemplate local:FavoritePage}" />
         </Tab>
+        <Tab Icon="baseline_flip_black_18dp" Title="Сканер" Route="Scanner">
+            <ShellContent ContentTemplate="{x:DataTemplate local:ScannerPage}" />
+        </Tab>
         <Tab Icon="frame_account2_x2" Title="Аккаунт" Route="Account">
             <ShellContent ContentTemplate="{x:DataTemplate local:AccountPage}" />
+        </Tab>
+        <Tab Icon="frame_settings2_x2" Title="Настройки" Route="Settings">
+            <ShellContent ContentTemplate="{x:DataTemplate local:OptionsPage}" />
         </Tab>
     </TabBar>
 </Shell>

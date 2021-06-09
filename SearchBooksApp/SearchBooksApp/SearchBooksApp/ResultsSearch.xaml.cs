@@ -17,6 +17,7 @@ namespace SearchBooksApp
         private User user;
         private Book selectedBook;
         private List<Book> books;
+        private bool isSearchByISBN;
 
         private string Query { get; set; }
 
@@ -30,11 +31,12 @@ namespace SearchBooksApp
             }
         }
 
-        public ResultsSearch(string query)
+        public ResultsSearch(string query, bool isSearchByISBN = false)
         {
             InitializeComponent();
 
             this.Query = query;
+            this.isSearchByISBN = isSearchByISBN;
         }
 
         protected async override void OnAppearing()
@@ -57,7 +59,12 @@ namespace SearchBooksApp
             try
             {
                 if (books == null)
-                    books = await SearchBooks.Search(Query);
+                {
+                    if (!isSearchByISBN)
+                        books = await SearchBooks.Search(Query);
+                    else
+                        books = await SearchBooks.SearchByISBN(Query);
+                }
 
                 searchIndicator.IsRunning = false;
                 searchIndicator.IsVisible = false;
@@ -72,17 +79,19 @@ namespace SearchBooksApp
                     if (user != null)
                     {
                         //User oldUser = User.GetUser(user);
-
-                        if (user.SearchHistory.Where(sh => sh == Query).FirstOrDefault() == null)
-                            user.SearchHistory.Add(Query);
-
-                        object data = new
+                        if (!isSearchByISBN)
                         {
-                            search_history = user.SearchHistory
-                        };
+                            if (user.SearchHistory.Where(sh => sh == Query).FirstOrDefault() == null)
+                                user.SearchHistory.Add(Query);
 
-                        if (Connectivity.NetworkAccess == NetworkAccess.Internet)
-                            await UsersOperations.UpdateUserData(user.Id, data);
+                            object data = new
+                            {
+                                search_history = user.SearchHistory
+                            };
+
+                            if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+                                await UsersOperations.UpdateUserData(user.Id, data);
+                        }
                     }
                 }
                 else this.Content = new Label()

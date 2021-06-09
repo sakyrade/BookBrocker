@@ -1,13 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SearchBooksApp.OptionsPage" Visual="Material">
+             x:Class="SearchBooksApp.OptionsPage" Visual="Material" x:Name="optionsPage">
     <Shell.TitleView>
         <Label FontFamily="HDR" Text="Настройки" TextColor="Black" FontSize="Large" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
     </Shell.TitleView>
     <ContentPage.Content>
-        <StackLayout>
-            <Button x:Name="btnExit" Margin="10" IsVisible="false" Clicked="ExitAccount" VerticalOptions="EndAndExpand" CornerRadius="10" FontFamily="HDR" TextColor="Red" FontSize="14" Text="Выйти из аккаунта" Padding="5" BackgroundColor="White" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Button Text="Очистить историю просмотров" Clicked="ClearViewingBooks" Margin="10,10" Padding="5" TextColor="Black" FontFamily="HDR" BackgroundColor="White" />
+                <Frame Margin="10" VerticalOptions="EndAndExpand">
+                    <StackLayout>
+                        <Frame CornerRadius="15" Padding="0" Margin="120,0,120,0">
+                            <Image Source="web_hi_res_512" Aspect="AspectFill" />
+                        </Frame>
+                        <Label Text="Book Brocker"
+                           TextColor="Black"
+                           FontSize="30"
+                           FontAttributes="Italic"
+                           FontFamily="HDR"
+                           HorizontalOptions="CenterAndExpand" />
+                        <StackLayout Margin="10">
+                            <Label FontFamily="HDR" HorizontalTextAlignment="Center" BindingContext="{x:Reference optionsPage}" Text="{Binding CurrentVersion, StringFormat='Версия приложения: {0}'}" TextColor="Black" />
+                            <Label FontFamily="HDR" HorizontalTextAlignment="Center" BindingContext="{x:Reference optionsPage}" Text="{Binding CurrentBuild, StringFormat='Версия сборки: {0}'}" TextColor="Black" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

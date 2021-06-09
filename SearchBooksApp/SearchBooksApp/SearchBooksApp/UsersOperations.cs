@@ -10,6 +10,7 @@ namespace SearchBooksApp
 {
     public abstract class UsersOperations : HostAPI
     {
+        /*
         public static async Task<bool> UpdateUserData(string id, object data)
         {
             using (var client = new HttpClient())
@@ -25,6 +26,19 @@ namespace SearchBooksApp
                 return false;
             }
         }
+        */
+        public static async Task UpdateUserData(string id, object data)
+        {
+            using (var client = new HttpClient())
+            {
+                string serializableBook = JsonConvert.SerializeObject(data);
+                JObject content = new JObject
+                {
+                    { "data", serializableBook }
+                };
+                await client.PostAsync($"{HOST_NAME}/update_user_data?id={id}", new StringContent(content.ToString()));
+            }
+        }
 
         public static async Task<JObject> UpdateUserData(string id)
         {
@@ -35,6 +49,45 @@ namespace SearchBooksApp
                 if (obj["status"].ToString() == "success")
                     return obj;
                 return null;
+            }
+        }
+
+        public static async Task InsertInUserListBook(string id, Book book, string listName)
+        {
+            using (var client = new HttpClient())
+            {
+                string serializableBook = JsonConvert.SerializeObject(book);
+                JObject content = new JObject
+                {
+                    { "book", serializableBook }
+                };
+                await client.PostAsync($"{HOST_NAME}/insert_in_user_list_book?id={id}&list_name={listName}", new StringContent(content.ToString()));
+            }
+        }
+
+        public static async Task DeleteInUserListBook(string id, Book book, string listName)
+        {
+            using (var client = new HttpClient())
+            {
+                string serializableBook = JsonConvert.SerializeObject(book);
+                JObject content = new JObject
+                {
+                    { "book", serializableBook }
+                };
+                await client.PostAsync($"{HOST_NAME}/delete_in_user_list_book?id={id}&list_name={listName}", new StringContent(content.ToString()));
+            }
+        }
+
+        public static async Task UpdatePositionInUserViewingBooks(string id, Book book)
+        {
+            using (var client = new HttpClient())
+            {
+                string serializableBook = JsonConvert.SerializeObject(book);
+                JObject content = new JObject
+                {
+                    { "book", serializableBook }
+                };
+                await client.PostAsync($"{HOST_NAME}/update_position_in_user_viewing_books?id={id}", new StringContent(content.ToString()));
             }
         }
     }

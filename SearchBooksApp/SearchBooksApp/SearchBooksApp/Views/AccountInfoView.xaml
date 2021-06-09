@@ -1,29 +1,57 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SearchBooksApp.Views.AccountInfoView" Visual="Material" x:Name="accountInfo">
+             x:Class="SearchBooksApp.Views.AccountInfoView" Visual="Material" x:Name="accountInfo" >
   <ContentView.Content>
         <ScrollView>
-            <Grid>
-                <StackLayout>
-                    <StackLayout Padding="0" VerticalOptions="StartAndExpand">
-                        <Image  />
-                        <Label TextColor="Black" HorizontalTextAlignment="Center" Margin="20" FontFamily="HDR" HorizontalOptions="CenterAndExpand" 
+            <Frame>
+                <Grid>
+                    <StackLayout>
+                        <StackLayout Padding="0" VerticalOptions="CenterAndExpand">
+                            <Label TextColor="Black" HorizontalTextAlignment="Center" Margin="20" FontFamily="HDR" HorizontalOptions="CenterAndExpand" 
                                             FontSize="30" Text="{Binding Path=User.Nickname}" BindingContext="{x:Reference accountInfo}"
                                             FontAttributes="Bold" />
+                        </StackLayout>
+                        <StackLayout VerticalOptions="CenterAndExpand" Margin="10">
+                            <Label Margin="10,0" TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.DateRegistration, StringFormat='Дата регистрации аккаунта: {0}'}" BindingContext="{x:Reference accountInfo}" />
+                            <Label Margin="10,0" TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.Sex, StringFormat='Пол: {0}'}" BindingContext="{x:Reference accountInfo}" />
+                        </StackLayout>
+                        <Label Text="История просмотров" FontSize="22" Margin="20" TextColor="Black" FontFamily="HDR" />
+                        <Label TextColor="Black" FontFamily="HDR" x:Name="textError" IsVisible="False" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" />
+                        <CollectionView SelectionMode="Single" BindingContext="{x:Reference accountInfo}" HeightRequest="380" ItemsSource="{Binding}" SelectedItem="{Binding SelectedBook, Mode=TwoWay}"
+                            HorizontalScrollBarVisibility="Always" IsVisible="False" x:Name="viewingBooks" SelectionChanged="SelectionBook" Margin="-10">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Padding="10,20">
+                                        <Frame WidthRequest="200" CornerRadius="10" BackgroundColor="#666666">
+                                            <StackLayout>
+                                                <Image Source="{Binding Path=ImageSource}" HeightRequest="180" VerticalOptions="CenterAndExpand" />
+                                                <Label TextColor="White" FontSize="13" 
+                                       FontAttributes="Bold" 
+                                       Text="{Binding Path=Title}"
+                                       HorizontalTextAlignment="Center"
+                                       FontFamily="HDR" VerticalOptions="EndAndExpand" />
+                                                <Label TextColor="White"
+                                           Text="{Binding Path=Author}"
+                                           HorizontalTextAlignment="Center"
+                                           FontFamily="HDR" VerticalOptions="End" />
+                                            </StackLayout>
+                                        </Frame>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Horizontal" />
+                            </CollectionView.ItemsLayout>
+                        </CollectionView>
+                        <StackLayout VerticalOptions="CenterAndExpand"  Margin="10,20">
+                            <Button CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Изменить пароль" Clicked="UpdatePassword" Padding="5" BackgroundColor="#E56C44" />
+                            <Button CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Уточнить предпочтения" Clicked="SelectGenres" Padding="5" BackgroundColor="#E56C44" />
+                            <Button Margin="0,2,0,0" Clicked="ExitAccount" CornerRadius="10" FontFamily="HDR" TextColor="Red" FontSize="14" Text="Выйти из аккаунта" Padding="5" BorderColor="Black" BackgroundColor="White" />
+                        </StackLayout>
                     </StackLayout>
-                    <StackLayout VerticalOptions="CenterAndExpand" Margin="10">
-                        <Label Margin="10,0" TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.Age, StringFormat='Возраст: {0}'}" BindingContext="{x:Reference accountInfo}" />
-                        <Label Margin="10,0" TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.DateRegistration, StringFormat='Дата регистрации аккаунта: {0}'}" BindingContext="{x:Reference accountInfo}" />
-                        <Label Margin="10,0" TextColor="Black" FontFamily="HDR" FontSize="16" Text="{Binding Path=User.Sex, StringFormat='Пол: {0}'}" BindingContext="{x:Reference accountInfo}" />
-                    </StackLayout>
-                    <StackLayout VerticalOptions="EndAndExpand"  Margin="10,20">
-                        <Button CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Изменить пароль" Clicked="UpdatePassword" Padding="5" BackgroundColor="#E56C44" />
-                        <Button CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Уточнить предпочтения" Clicked="SelectGenres" Padding="5" BackgroundColor="#E56C44" />
-                        <Button Margin="0,2,0,0" Clicked="ExitAccount" CornerRadius="10" FontFamily="HDR" TextColor="Red" FontSize="14" Text="Выйти из аккаунта" Padding="5" BorderColor="Black" BackgroundColor="White" />
-                    </StackLayout>
-                </StackLayout>
-            </Grid>
+                </Grid>
+            </Frame>
         </ScrollView>
     </ContentView.Content>
 </ContentView>

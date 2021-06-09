@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yOT2jVCxKOBOld0F/ks+v/QxwKdv/h9ZAdoM6p8obZF2KsOOHrpH59drLq0hFPYAW9339eskiM61bB1hEeY97Q==",
+  "dgSpecHash": "CpQxO6C7xng4BoMDCX1J6kB01Bwwvz3bUkZg3jSHyVaAGqbqhwW1H7KixAoIYlnzpfLf6YxCuOnlRZs2e+7+YA==",
   "success": true,
   "projectFilePath": "C:\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.csproj",
   "expectedPackageFiles": [
@@ -21,7 +21,10 @@
     "C:\\Users\\Данил\\.nuget\\packages\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
     "C:\\Users\\Данил\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.763-beta\\xamarin.forms.pancakeview.2.3.0.763-beta.nupkg.sha512",
-    "C:\\Users\\Данил\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512"
+    "C:\\Users\\Данил\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\Данил\\.nuget\\packages\\zxing.net\\0.16.6\\zxing.net.0.16.6.nupkg.sha512",
+    "C:\\Users\\Данил\\.nuget\\packages\\zxing.net.mobile\\3.1.0-beta2\\zxing.net.mobile.3.1.0-beta2.nupkg.sha512",
+    "C:\\Users\\Данил\\.nuget\\packages\\zxing.net.mobile.forms\\3.1.0-beta2\\zxing.net.mobile.forms.3.1.0-beta2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -92,6 +92,38 @@ namespace SearchBooksApp
             }
         }
 
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (user != null)
+            {
+                bool alreadyBookExists = true;
+                foreach (var b in user.ViewingBooks)
+                {
+                    if (b == Book)
+                    {
+                        alreadyBookExists = false;
+                        break;
+                    }
+                }
+
+                if (alreadyBookExists)
+                    user.ViewingBooks.Insert(0, Book);
+                else
+                {
+                    user.ViewingBooks.Remove(Book);
+                    user.ViewingBooks.Insert(0, Book);
+                }
+
+                object data = new
+                {
+                    viewing_books = user.ViewingBooks
+                };
+                await UsersOperations.UpdateUserData(user.Id, data);
+            }
+        }
+
         private async void AddBook(object sender, EventArgs e)
         {
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
@@ -109,7 +141,6 @@ namespace SearchBooksApp
 
             bookExists = user.SelectedBooks.Where(b => b == Book).FirstOrDefault();
 
-            //User oldUser = User.GetUser(user);
             try
             {
                 if (bookExists == null)
@@ -127,7 +158,6 @@ namespace SearchBooksApp
                 {
                     selected_books = user.SelectedBooks
                 };
-
                 await UsersOperations.UpdateUserData(user.Id, data);
             }
             catch (System.Net.WebException)

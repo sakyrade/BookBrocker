@@ -8,10 +8,13 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Button Text="Очистить историю просмотров" Clicked="ClearViewingBooks" Margin="10,10" Padding="5" TextColor="Black" FontFamily="HDR" BackgroundColor="White" />
-                <Frame Margin="10" VerticalOptions="EndAndExpand">
+                <StackLayout Margin="20">
+                    <Button Text="Очистить историю просмотров" Clicked="ClearViewingBooks" FontSize="13" TextColor="White" CornerRadius="10" BackgroundColor="#E56C44" FontFamily="HDR" />
+                    <Button Text="Обратная связь" Clicked="OpenFeedbackPage" TextColor="White" CornerRadius="10" BackgroundColor="#E56C44" FontFamily="HDR" />
+                </StackLayout>
+                <Frame Margin="20" VerticalOptions="EndAndExpand" Padding="10">
                     <StackLayout>
-                        <Frame CornerRadius="15" Padding="0" Margin="120,0,120,0">
+                        <Frame CornerRadius="15" Padding="0" Margin="120,10,120,0">
                             <Image Source="web_hi_res_512" Aspect="AspectFill" />
                         </Frame>
                         <Label Text="Book Brocker"

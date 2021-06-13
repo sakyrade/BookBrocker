@@ -1907,7 +1907,6 @@ C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\SearchBook
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\mipmap-xxxhdpi\ic_launcher_foreground.png
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\drawable\web_hi_res_512.png
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\drawable\ic_alert.png
-C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\drawable\baseline_flip_black_18dp.png
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\47\jl\files.cache
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\49\jl\files.cache
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\64\jl\files.cache
@@ -1929,3 +1928,4 @@ C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\android\sr
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\android\src\crc6480997b3ef81bf9b2\ZxingOverlayView.java
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\android\src\crc6480997b3ef81bf9b2\ZXingScannerFragment.java
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\android\src\crc6480997b3ef81bf9b2\ZXingSurfaceView.java
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\drawable\flip.png

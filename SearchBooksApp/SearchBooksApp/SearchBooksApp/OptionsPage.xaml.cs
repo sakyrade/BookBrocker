@@ -60,6 +60,17 @@ namespace SearchBooksApp
             }
         }
 
+        private async void OpenFeedbackPage(object sender, EventArgs e)
+        {
+            if (Connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                Toast.MakeText(App.Context, "Отсутствует подключение к Интернету", ToastLength.Long).Show();
+                return;
+            }
+
+            await Navigation.PushAsync(new FeedbackPage());
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();

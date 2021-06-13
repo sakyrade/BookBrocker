@@ -43,38 +43,38 @@
 	.section	.rodata.map_aname.7,"aMS",@progbits,1
 	.type	.L.map_aname.7, @object
 .L.map_aname.7:
-	.asciz	"SearchBooksApp.Android"
-	.size	.L.map_aname.7, 23
+	.asciz	"Xamarin.AndroidX.AppCompat.AppCompatResources"
+	.size	.L.map_aname.7, 46
 
 	.section	.rodata.map_aname.8,"aMS",@progbits,1
 	.type	.L.map_aname.8, @object
 .L.map_aname.8:
-	.asciz	"Xamarin.AndroidX.AppCompat.AppCompatResources"
-	.size	.L.map_aname.8, 46
+	.asciz	"FormsViewGroup"
+	.size	.L.map_aname.8, 15
 
 	.section	.rodata.map_aname.9,"aMS",@progbits,1
 	.type	.L.map_aname.9, @object
 .L.map_aname.9:
-	.asciz	"FormsViewGroup"
-	.size	.L.map_aname.9, 15
+	.asciz	"Xamarin.AndroidX.SlidingPaneLayout"
+	.size	.L.map_aname.9, 35
 
 	.section	.rodata.map_aname.10,"aMS",@progbits,1
 	.type	.L.map_aname.10, @object
 .L.map_aname.10:
-	.asciz	"Xamarin.AndroidX.SlidingPaneLayout"
-	.size	.L.map_aname.10, 35
+	.asciz	"Xamarin.AndroidX.Lifecycle.LiveData.Core"
+	.size	.L.map_aname.10, 41
 
 	.section	.rodata.map_aname.11,"aMS",@progbits,1
 	.type	.L.map_aname.11, @object
 .L.map_aname.11:
-	.asciz	"Xamarin.AndroidX.Lifecycle.LiveData.Core"
-	.size	.L.map_aname.11, 41
+	.asciz	"Xamarin.AndroidX.Collection"
+	.size	.L.map_aname.11, 28
 
 	.section	.rodata.map_aname.12,"aMS",@progbits,1
 	.type	.L.map_aname.12, @object
 .L.map_aname.12:
-	.asciz	"Xamarin.AndroidX.Collection"
-	.size	.L.map_aname.12, 28
+	.asciz	"SearchBooksApp.Android"
+	.size	.L.map_aname.12, 23
 
 	.section	.rodata.map_aname.13,"aMS",@progbits,1
 	.type	.L.map_aname.13, @object

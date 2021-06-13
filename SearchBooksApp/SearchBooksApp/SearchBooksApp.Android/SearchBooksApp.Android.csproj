@@ -198,7 +198,7 @@
     <AndroidResource Include="Resources\drawable\ic_alert.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\baseline_flip_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable\flip.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

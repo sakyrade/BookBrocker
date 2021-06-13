@@ -1,4 +1,6 @@
-﻿using Android.Widget;
+﻿using Android;
+using Android.Content.PM;
+using Android.Widget;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +17,19 @@ namespace SearchBooksApp
     {
         public ScannerPage()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+
+            if (App.Context.CheckSelfPermission(Manifest.Permission.Camera) != (int)Permission.Granted)
+            {
+                this.Content = new Label()
+                {
+                    Text = "Разрешите использование камеры вашего устройства, перезапустите приложение и повторите попытку.",
+                    TextColor = Color.Black,
+                    FontFamily = "HDR",
+                    HorizontalTextAlignment = TextAlignment.Center,
+                    VerticalOptions = LayoutOptions.CenterAndExpand
+                };
+            }
         }
 
         private void OnScanBookResult(ZXing.Result result)

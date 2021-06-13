@@ -4,9 +4,9 @@
              x:Class="SearchBooksApp.Views.AccountInfoView" Visual="Material" x:Name="accountInfo" >
   <ContentView.Content>
         <ScrollView>
-            <Frame>
+            <Frame Padding="0">
                 <Grid>
-                    <StackLayout>
+                    <StackLayout Padding="0">
                         <StackLayout Padding="0" VerticalOptions="CenterAndExpand">
                             <Label TextColor="Black" HorizontalTextAlignment="Center" Margin="20" FontFamily="HDR" HorizontalOptions="CenterAndExpand" 
                                             FontSize="30" Text="{Binding Path=User.Nickname}" BindingContext="{x:Reference accountInfo}"
@@ -19,7 +19,7 @@
                         <Label Text="История просмотров" FontSize="22" Margin="20" TextColor="Black" FontFamily="HDR" />
                         <Label TextColor="Black" FontFamily="HDR" x:Name="textError" IsVisible="False" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" />
                         <CollectionView SelectionMode="Single" BindingContext="{x:Reference accountInfo}" HeightRequest="380" ItemsSource="{Binding}" SelectedItem="{Binding SelectedBook, Mode=TwoWay}"
-                            HorizontalScrollBarVisibility="Always" IsVisible="False" x:Name="viewingBooks" SelectionChanged="SelectionBook" Margin="-10">
+                            HorizontalScrollBarVisibility="Always" IsVisible="False" x:Name="viewingBooks" SelectionChanged="SelectionBook" Margin="0">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid Padding="10,20">

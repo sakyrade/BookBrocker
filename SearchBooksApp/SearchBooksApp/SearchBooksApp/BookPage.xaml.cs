@@ -98,21 +98,13 @@ namespace SearchBooksApp
 
             if (user != null)
             {
-                bool alreadyBookExists = true;
-                foreach (var b in user.ViewingBooks)
-                {
-                    if (b == Book)
-                    {
-                        alreadyBookExists = false;
-                        break;
-                    }
-                }
+                Book book = user.ViewingBooks.Where(b => b.ImageSource == Book.ImageSource && b.Title == Book.Title && b.Author == Book.Author && b.PublishingHouse == Book.PublishingHouse).FirstOrDefault();
 
-                if (alreadyBookExists)
+                if (book == null)
                     user.ViewingBooks.Insert(0, Book);
                 else
                 {
-                    user.ViewingBooks.Remove(Book);
+                    user.ViewingBooks.Remove(book);
                     user.ViewingBooks.Insert(0, Book);
                 }
 

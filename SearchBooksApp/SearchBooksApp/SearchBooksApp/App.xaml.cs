@@ -36,7 +36,7 @@ namespace SearchBooksApp
                         await Authorization.Auth(token.ToString());
                 }
             }
-            catch (System.Net.WebException)
+            catch (Exception)
             {
 
             }

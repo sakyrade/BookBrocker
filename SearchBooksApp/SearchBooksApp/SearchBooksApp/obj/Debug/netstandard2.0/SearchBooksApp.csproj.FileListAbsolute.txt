@@ -91,3 +91,4 @@ C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\Wallpap
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\OutUserPage.xaml.g.cs
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\WarningPage.xaml.g.cs
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\ScannerPage.xaml.g.cs
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\FeedbackPage.xaml.g.cs

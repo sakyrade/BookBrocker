@@ -9,8 +9,8 @@
         <ScrollView>
             <StackLayout>
                 <StackLayout Margin="20">
-                    <Button Text="Очистить историю просмотров" Clicked="ClearViewingBooks" FontSize="13" TextColor="White" CornerRadius="10" BackgroundColor="#E56C44" FontFamily="HDR" />
-                    <Button Text="Обратная связь" Clicked="OpenFeedbackPage" TextColor="White" CornerRadius="10" BackgroundColor="#E56C44" FontFamily="HDR" />
+                    <Button Padding="5" Text="Очистить историю просмотров" Clicked="ClearViewingBooks" FontSize="13" TextColor="White" CornerRadius="10" BackgroundColor="#E56C44" FontFamily="HDR" />
+                    <Button Padding="5" Text="Обратная связь" Clicked="OpenFeedbackPage" TextColor="White" CornerRadius="10" BackgroundColor="#E56C44" FontFamily="HDR" />
                 </StackLayout>
                 <Frame Margin="20" VerticalOptions="EndAndExpand" Padding="10">
                     <StackLayout>
@@ -26,6 +26,7 @@
                         <StackLayout Margin="10">
                             <Label FontFamily="HDR" HorizontalTextAlignment="Center" BindingContext="{x:Reference optionsPage}" Text="{Binding CurrentVersion, StringFormat='Версия приложения: {0}'}" TextColor="Black" />
                             <Label FontFamily="HDR" HorizontalTextAlignment="Center" BindingContext="{x:Reference optionsPage}" Text="{Binding CurrentBuild, StringFormat='Версия сборки: {0}'}" TextColor="Black" />
+                            <Label FontFamily="HDR" HorizontalTextAlignment="Center" Text="Электронная почта разработчика: sakyrade@yandex.com" TextColor="Black" />
                         </StackLayout>
                     </StackLayout>
                 </Frame>

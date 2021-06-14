@@ -3,6 +3,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,12 +32,12 @@ namespace SearchBooksApp
         {
             using (var client = new HttpClient())
             {
-                string serializableBook = JsonConvert.SerializeObject(data);
+                JToken token = JToken.FromObject(data);
                 JObject content = new JObject
                 {
-                    { "data", serializableBook }
+                    { "data", token }
                 };
-                await client.PostAsync($"{HOST_NAME}/update_user_data?id={id}", new StringContent(content.ToString()));
+                await client.PostAsync($"{HOST_NAME}/update_user_data?id={id}", new StringContent(content.ToString(), Encoding.Default, "application/json"));
             }
         }
 

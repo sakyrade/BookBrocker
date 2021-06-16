@@ -11,18 +11,20 @@
                 <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
                     <Entry FontFamily="HDR" Placeholder="Никнейм или адрес электронной почты" BindingContext="{x:Reference feedbackPage}" Text="{Binding NicknameOrEmailAddress, Mode=TwoWay}" FontSize="15" HorizontalTextAlignment="Center" />
                 </Frame>
-                <StackLayout Orientation="Horizontal">
-                    <Label FontFamily="HDR" Text="Тема:" VerticalOptions="Center" Margin="10,15,0,0" FontSize="18" />
-                    <Picker WidthRequest="250" FontSize="16" BindingContext="{x:Reference feedbackPage}" SelectedItem="{Binding Theme, Mode=TwoWay}" FontFamily="HDR">
-                        <Picker.Items>
-                            <x:String>Предложение об улучшении или дополнении функционала</x:String>
-                            <x:String>Сообщение об ошибке</x:String>
-                        </Picker.Items>
-                    </Picker>
-                </StackLayout>
+                <Frame  BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Horizontal" Margin="0">
+                        <Label Text="Тема сообщения:" FontSize="16" VerticalOptions="EndAndExpand" Margin="20,10,0,10" FontFamily="HDR" />
+                        <Picker VerticalTextAlignment="Center" WidthRequest="235" FontSize="16" BindingContext="{x:Reference feedbackPage}" SelectedItem="{Binding Theme, Mode=TwoWay}" FontFamily="HDR">
+                            <Picker.Items>
+                                <x:String>Предложение об улучшении или дополнении функционала</x:String>
+                                <x:String>Сообщение об ошибке</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                </Frame>
                 <Label x:Name="labelCountSymbols" FontFamily="HDR" Text="{Binding Source={x:Reference entryMessage}, Path=Text.Length, StringFormat='{0}/60'}" VerticalOptions="Center" Margin="10" FontSize="16" HorizontalTextAlignment="End" />
-                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="200">
-                    <Editor TextChanged="EntryMessageTextChanged" MaxLength="300" x:Name="entryMessage" BindingContext="{x:Reference feedbackPage}" Text="{Binding Message, Mode=TwoWay}" FontFamily="HDR" Placeholder="Сообщение" Margin="10,0" HeightRequest="200" />
+                <Frame BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                    <Editor TextChanged="EntryMessageTextChanged" MaxLength="300" x:Name="entryMessage" BindingContext="{x:Reference feedbackPage}" Text="{Binding Message, Mode=TwoWay}" FontFamily="HDR" Placeholder="Сообщение" Margin="0" HeightRequest="200" />
                 </Frame>
                 <Button Clicked="SendFeedback" Padding="5" TextColor="White" Text="Отправить" CornerRadius="10" Margin="0,10" BackgroundColor="#E56C44" FontFamily="HDR" />
             </StackLayout>

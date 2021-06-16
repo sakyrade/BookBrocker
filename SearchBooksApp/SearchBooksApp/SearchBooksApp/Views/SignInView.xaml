@@ -9,7 +9,7 @@
                     <Frame BackgroundColor="White" Padding="0" HasShadow="True" HorizontalOptions="FillAndExpand" CornerRadius="10">
                         <StackLayout>
                             <StackLayout HorizontalOptions="CenterAndExpand" Padding="0" Margin="0">
-                                <Frame HorizontalOptions="CenterAndExpand" CornerRadius="0" Padding="0" HeightRequest="130">
+                                <Frame HorizontalOptions="CenterAndExpand" CornerRadius="10" Padding="0" HeightRequest="130">
                                     <Grid>
                                         <StackLayout Padding="0">
                                             <Image Source="fly_books_auth.jpg" Aspect="AspectFill" />
@@ -24,23 +24,23 @@
                                 </Frame>
                             </StackLayout>
                             <StackLayout Margin="0,10,0,0">
-                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                                <Frame BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
                                     <Entry Placeholder="Никнейм"
                                            Visual="Material"
                                            HorizontalTextAlignment="Center"
                                            BindingContext="{x:Reference signInView}"
-                                           Text="{Binding Path=Login}" Margin="9,0,9,0"
+                                           Text="{Binding Path=Login}" Margin="0"
                                            FontSize="16"
                                            MaxLength="255" FontFamily="HDR" />
                                 </Frame>
 
-                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                                <Frame BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
                                     <Entry Placeholder="Пароль" 
                                            IsPassword="True"
                                            BindingContext="{x:Reference signInView}"
                                            Visual="Material"
                                            HorizontalTextAlignment="Center"
-                                           Text="{Binding Path=Password}" Margin="9,0,9,0"
+                                           Text="{Binding Path=Password}" Margin="0"
                                            FontSize="16"
                                            MaxLength="16" FontFamily="HDR" />
                                 </Frame>

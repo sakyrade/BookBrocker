@@ -3,62 +3,64 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SearchBooksApp.Views.RegistrationView" Visual="Material" x:Name="signUpView">
   <ContentView.Content>
-      <StackLayout>
-            <StackLayout Padding="0">
+        <StackLayout VerticalOptions="Center">
+            <StackLayout Padding="0" VerticalOptions="Center">
                 <ScrollView>
-                    <Grid>
-                        <StackLayout Margin="15,30,15,30">
-                            <Frame BackgroundColor="White" HasShadow="True" VerticalOptions="FillAndExpand" CornerRadius="10">
-                                <StackLayout>
+                    <Grid VerticalOptions="CenterAndExpand">
+                        <StackLayout VerticalOptions="CenterAndExpand" Margin="15,30,15,30">
+                            <Frame BackgroundColor="White" HasShadow="True" VerticalOptions="CenterAndExpand" CornerRadius="10">
+                                <StackLayout VerticalOptions="Center">
 
                                     <StackLayout Margin="0,15,0,0">
-                                        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                                        <Frame BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
                                             <Entry Placeholder="Никнейм"
                                                    Visual="Material"
                                                    HorizontalTextAlignment="Center"
                                                    BindingContext="{x:Reference signUpView}"
-                                                   Text="{Binding Path=Nickname, Mode=TwoWay}" Margin="9,0,9,0"
+                                                   Text="{Binding Path=Nickname, Mode=TwoWay}" Margin="0"
                                                    FontSize="16"
                                                    MaxLength="255" FontFamily="HDR"
                                                    Unfocused="EntryNickname_Unfocused" />
                                         </Frame>
                                         
-                                        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                                        <Frame BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
                                             <Entry Placeholder="Пароль"
                                                    Visual="Material"
                                                    IsPassword="True"
                                                    HorizontalTextAlignment="Center"
                                                    BindingContext="{x:Reference signUpView}"
-                                                   Text="{Binding Path=Password, Mode=TwoWay}" Margin="9,0,9,0"
+                                                   Text="{Binding Path=Password, Mode=TwoWay}" Margin="0"
                                                    FontSize="16"
                                                    MaxLength="255" FontFamily="HDR"
                                                    Unfocused="EntryPassword_Unfocused" />
                                         </Frame>
 
-                                        <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                                        <Frame BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
                                             <Entry Placeholder="Повторите пароль"
                                                    Visual="Material"
                                                    IsPassword="True"
                                                    HorizontalTextAlignment="Center"
                                                    BindingContext="{x:Reference signUpView}"
-                                                   Text="{Binding Path=PasswordRepeat, Mode=TwoWay}" Margin="9,0,9,0"
+                                                   Text="{Binding Path=PasswordRepeat, Mode=TwoWay}" Margin="0"
                                                    FontSize="16"
                                                    MaxLength="255" FontFamily="HDR"
                                                    Unfocused="EntryPasswordRepeat_Unfocused" />
                                         </Frame>
 
-                                        <StackLayout Orientation="Horizontal" Margin="10">
-                                            <Label Text="Пол:" FontSize="20" VerticalOptions="EndAndExpand" Margin="10" FontFamily="HDR" />
-                                            <Picker WidthRequest="110" HorizontalTextAlignment="Center" FontFamily="HDR" BindingContext="{x:Reference signUpView}" SelectedItem="{Binding Path=Sex, Mode=TwoWay}" Unfocused="PickerSex_Unfocused">
-                                                <Picker.Items>
-                                                    <x:String>Мужской</x:String>
-                                                    <x:String>Женский</x:String>
-                                                    <x:String>Другое</x:String>
-                                                </Picker.Items>
-                                            </Picker>
-                                        </StackLayout>
+                                        <Frame BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
+                                            <StackLayout Orientation="Horizontal" Margin="0">
+                                                <Label Text="Пол:" FontSize="20" VerticalOptions="EndAndExpand" Margin="20,10,0,10" FontFamily="HDR" />
+                                                <Picker WidthRequest="110" HorizontalTextAlignment="Start" FontFamily="HDR" BindingContext="{x:Reference signUpView}" SelectedItem="{Binding Path=Sex, Mode=TwoWay}" Unfocused="PickerSex_Unfocused">
+                                                    <Picker.Items>
+                                                        <x:String>Мужской</x:String>
+                                                        <x:String>Женский</x:String>
+                                                        <x:String>Другое</x:String>
+                                                    </Picker.Items>
+                                                </Picker>
+                                            </StackLayout>
+                                        </Frame>
 
-                                        <Button Clicked="Register" CornerRadius="10" FontFamily="HDR" TextColor="White" FontSize="14" Text="Зарегистрироваться" Padding="5" BackgroundColor="#E56C44" />
+                                        <Button Clicked="Register" CornerRadius="10" FontFamily="HDR" Margin="0,10" TextColor="White" FontSize="14" Text="Зарегистрироваться" Padding="5" BackgroundColor="#E56C44" />
 
                                     </StackLayout>
                                 </StackLayout>

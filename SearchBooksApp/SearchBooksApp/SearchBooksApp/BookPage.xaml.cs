@@ -56,6 +56,9 @@ namespace SearchBooksApp
 
             Book = book;
 
+            if (Book.AgeLimit.Select(c => char.IsDigit(c)).FirstOrDefault())
+                Book.AgeLimit = '+' + Book.AgeLimit;
+
             bookImages.ItemsSource = book.ImageSources;
             SelectedImage = book.ImageSources.FirstOrDefault();
 

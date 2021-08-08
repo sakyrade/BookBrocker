@@ -14,7 +14,7 @@ namespace SearchBooksApp
         {
             using (var client = new HttpClient() { Timeout = TimeSpan.FromSeconds(900) })
             {
-                var stringResult = await client.GetStringAsync($"{HOST_NAME}/books_search_two?search={strQuery}");
+                var stringResult = await client.GetStringAsync($"{HOST_NAME2}/search_books?search={strQuery}");
                 JObject obj = JObject.Parse(stringResult);
                 if (obj["books"].Path.Length != 0)
                 {

@@ -635,7 +635,6 @@ C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\lp\79\jl
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\lp\82\jl\files.cache
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\lp\86\jl\files.cache
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\res\drawable\ic_alert.png
-C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\res\drawable\baseline_flip_black_18dp.png
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\android\assets\FastAndroidCamera.dll
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\android\assets\zxing.dll
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\android\assets\ZXing.Net.Mobile.Forms.dll
@@ -649,3 +648,4 @@ C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\android\
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\android\src\crc6480997b3ef81bf9b2\ZxingOverlayView.java
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\android\src\crc6480997b3ef81bf9b2\ZXingScannerFragment.java
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\android\src\crc6480997b3ef81bf9b2\ZXingSurfaceView.java
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Release\100\res\drawable\flip.png

@@ -14,7 +14,7 @@ namespace SearchBooksApp
         [JsonIgnore]
         private string site;
 
-        [JsonProperty(PropertyName = "bookSrc")]
+        [JsonProperty(PropertyName = "source")]
         public string BookSource
         {
             get { return bookSrc; }

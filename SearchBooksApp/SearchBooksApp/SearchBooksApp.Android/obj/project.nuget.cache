@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "an1XoqOr7ewx3EuExRfKNhfIj0on5demib+h1fMNtL2qWyu2lkM8vNwHnzkSy7Iwz69wb0k5MoE4PT9Vu+uUfA==",
+  "dgSpecHash": "DgNj/otTGCK7kIBB6brvcW8+u5vWDVzeauC/ni6xQD8eDfBADqn9nvyu4IT3CduaDgG+/t21LTABVqgKr0KeNw==",
   "success": true,
-  "projectFilePath": "C:\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.Android\\SearchBooksApp.Android.csproj",
+  "projectFilePath": "C:\\Xamarin Forms Projects\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.Android\\SearchBooksApp.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Данил\\.nuget\\packages\\fastandroidcamera\\2.0.0\\fastandroidcamera.2.0.0.nupkg.sha512",
     "C:\\Users\\Данил\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0-preview.4.21253.7\\microsoft.bcl.asyncinterfaces.6.0.0-preview.4.21253.7.nupkg.sha512",

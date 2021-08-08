@@ -68,6 +68,7 @@ namespace SearchBooksApp
 
                 searchIndicator.IsRunning = false;
                 searchIndicator.IsVisible = false;
+                searchAlert.IsVisible = false;
 
                 if (books.Count != 0)
                 {
@@ -115,6 +116,17 @@ namespace SearchBooksApp
                 };
             }
             catch (Java.Net.SocketTimeoutException)
+            {
+                this.Content = new Label()
+                {
+                    Text = "Ошибка подключения к серверу.",
+                    TextColor = Color.Black,
+                    FontFamily = "HDR",
+                    HorizontalTextAlignment = TextAlignment.Center,
+                    VerticalOptions = LayoutOptions.CenterAndExpand
+                };
+            }
+            catch (Java.Net.SocketException)
             {
                 this.Content = new Label()
                 {

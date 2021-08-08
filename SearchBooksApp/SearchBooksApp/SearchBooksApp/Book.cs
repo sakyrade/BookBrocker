@@ -82,7 +82,7 @@ namespace SearchBooksApp
             }
         }
 
-        [JsonProperty(PropertyName = "srcAndPriceBooks")]
+        [JsonProperty(PropertyName = "src_and_price_books")]
         public List<SourceAndPrice> SourceAndPriceBooks
         {
             get { return srcAndPriceBooks; }
@@ -93,7 +93,7 @@ namespace SearchBooksApp
             }
         }
 
-        [JsonProperty(PropertyName = "publishingHouse")]
+        [JsonProperty(PropertyName = "publishing_house")]
         public string PublishingHouse
         {
             get { return pubHouse; }
@@ -115,7 +115,7 @@ namespace SearchBooksApp
             }
         }
 
-        [JsonProperty(PropertyName = "yearRelease")]
+        [JsonProperty(PropertyName = "year_release")]
         public string YearRelease
         {
             get { return yearRelease; }
@@ -137,7 +137,7 @@ namespace SearchBooksApp
             }
         }
 
-        [JsonProperty(PropertyName = "ageLimit")]
+        [JsonProperty(PropertyName = "age_limit")]
         public string AgeLimit
         {
             get { return ageLimit; }
@@ -148,7 +148,7 @@ namespace SearchBooksApp
             }
         }
 
-        [JsonProperty(PropertyName = "classBook")]
+        [JsonProperty(PropertyName = "class_book")]
         public string ClassBook
         {
             get { return classBook; }
@@ -159,7 +159,7 @@ namespace SearchBooksApp
             }
         }
 
-        [JsonProperty(PropertyName = "typeBook")]
+        [JsonProperty(PropertyName = "type_book")]
         public string TypeBook
         {
             get { return typeBook; }
@@ -192,7 +192,7 @@ namespace SearchBooksApp
             }
         }
 
-        [JsonProperty(PropertyName = "imageSources")]
+        [JsonProperty(PropertyName = "images")]
         public List<string> ImageSources
         {
             get { return imageSources; }

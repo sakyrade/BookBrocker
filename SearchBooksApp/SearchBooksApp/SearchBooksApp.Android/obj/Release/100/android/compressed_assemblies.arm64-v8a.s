@@ -80,7 +80,7 @@
 
 	/* 8: SearchBooksApp.dll */
 	/* uncompressed_file_size */
-	.word	274432
+	.word	286720
 	/* loaded */
 	.byte	0
 	/* data */

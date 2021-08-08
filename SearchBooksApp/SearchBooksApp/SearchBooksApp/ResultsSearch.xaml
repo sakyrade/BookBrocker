@@ -8,7 +8,10 @@
     </Shell.TitleView>
     <ContentPage.Content>
         <StackLayout>
-            <ActivityIndicator IsRunning="True" x:Name="searchIndicator" VerticalOptions="CenterAndExpand" />
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <ActivityIndicator IsRunning="True" x:Name="searchIndicator" VerticalOptions="Center" />
+                <Label x:Name="searchAlert" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="20" FontFamily="HDR" TextColor="Black" Text="Поиск может занять много времени. Пожалуйста подождите..." />
+            </StackLayout>
             <CollectionView BindingContext="{x:Reference resultsSearch}" ItemsSource="{Binding}" IsVisible="false"
                             HorizontalScrollBarVisibility="Always" x:Name="resultSearch" SelectionMode="Single" SelectedItem="{Binding SelectedBook, Mode=TwoWay}" SelectionChanged="SelectionBook">
                 <CollectionView.ItemTemplate>

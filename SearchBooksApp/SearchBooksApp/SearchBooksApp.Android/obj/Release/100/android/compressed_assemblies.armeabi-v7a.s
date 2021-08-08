@@ -100,7 +100,7 @@
 
 	/* 8: SearchBooksApp.dll */
 	/* uncompressed_file_size */
-	.long	274432
+	.long	286720
 	/* loaded */
 	.byte	0
 	/* data */

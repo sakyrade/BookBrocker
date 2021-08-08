@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CpQxO6C7xng4BoMDCX1J6kB01Bwwvz3bUkZg3jSHyVaAGqbqhwW1H7KixAoIYlnzpfLf6YxCuOnlRZs2e+7+YA==",
+  "dgSpecHash": "x5C2+7ocd+zRUPstDJXCR0gxzMi/7sFmzkW/SmHMNika9BLI3djoOzfQNDaK/KmSCmsTfQhylbQBddJIsdDz8g==",
   "success": true,
-  "projectFilePath": "C:\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.csproj",
+  "projectFilePath": "C:\\Xamarin Forms Projects\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Данил\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0-preview.4.21253.7\\microsoft.bcl.asyncinterfaces.6.0.0-preview.4.21253.7.nupkg.sha512",
     "C:\\Users\\Данил\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

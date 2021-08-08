@@ -2902,11 +2902,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.Android\\SearchBooksApp.Android.csproj",
+      "projectUniqueName": "C:\\Xamarin Forms Projects\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.Android\\SearchBooksApp.Android.csproj",
       "projectName": "SearchBooksApp.Android",
-      "projectPath": "C:\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.Android\\SearchBooksApp.Android.csproj",
+      "projectPath": "C:\\Xamarin Forms Projects\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.Android\\SearchBooksApp.Android.csproj",
       "packagesPath": "C:\\Users\\Данил\\.nuget\\packages\\",
-      "outputPath": "C:\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.Android\\obj\\",
+      "outputPath": "C:\\Xamarin Forms Projects\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2927,8 +2927,8 @@
       "frameworks": {
         "monoandroid10.0": {
           "projectReferences": {
-            "C:\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.csproj": {
-              "projectPath": "C:\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.csproj"
+            "C:\\Xamarin Forms Projects\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.csproj": {
+              "projectPath": "C:\\Xamarin Forms Projects\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp\\SearchBooksApp.csproj"
             }
           }
         }

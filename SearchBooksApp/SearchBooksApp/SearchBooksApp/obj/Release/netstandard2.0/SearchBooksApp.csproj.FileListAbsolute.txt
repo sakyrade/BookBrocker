@@ -34,3 +34,4 @@ C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Release\netstandard2.0\Proce
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Release\netstandard2.0\WallpaperPage.xaml.g.cs
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Release\netstandard2.0\ScannerPage.xaml.g.cs
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Release\netstandard2.0\WarningPage.xaml.g.cs
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Release\netstandard2.0\FeedbackPage.xaml.g.cs

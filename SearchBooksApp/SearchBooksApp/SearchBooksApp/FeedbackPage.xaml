@@ -13,7 +13,7 @@
                 </Frame>
                 <Frame  BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
                     <StackLayout Orientation="Horizontal" Margin="0">
-                        <Label Text="Тема сообщения:" FontSize="16" VerticalOptions="EndAndExpand" Margin="20,10,0,10" FontFamily="HDR" />
+                        <Label Text="Тема:" FontSize="16" VerticalOptions="EndAndExpand" Margin="20,10,10,20" FontFamily="HDR" />
                         <Picker VerticalTextAlignment="Center" WidthRequest="235" FontSize="16" BindingContext="{x:Reference feedbackPage}" SelectedItem="{Binding Theme, Mode=TwoWay}" FontFamily="HDR">
                             <Picker.Items>
                                 <x:String>Предложение об улучшении или дополнении функционала</x:String>
@@ -26,7 +26,7 @@
                 <Frame BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand">
                     <Editor TextChanged="EntryMessageTextChanged" MaxLength="300" x:Name="entryMessage" BindingContext="{x:Reference feedbackPage}" Text="{Binding Message, Mode=TwoWay}" FontFamily="HDR" Placeholder="Сообщение" Margin="0" HeightRequest="200" />
                 </Frame>
-                <Button Clicked="SendFeedback" Padding="5" TextColor="White" Text="Отправить" CornerRadius="10" Margin="0,10" BackgroundColor="#E56C44" FontFamily="HDR" />
+                <Button Clicked="SendFeedback" Padding="10" TextColor="White" Text="Отправить" CornerRadius="10" Margin="0,10" BackgroundColor="#E56C44" FontFamily="HDR" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

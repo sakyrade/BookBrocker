@@ -85,10 +85,47 @@ C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\XamlC.s
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\SearchBooksApp.csproj.CopyComplete
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\UpdatePasswordPage.xaml.g.cs
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\RecomendedBooksPage.xaml.g.cs
-C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\SearchBooksApp.csprojAssemblyReference.cache
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\ProcessPage.xaml.g.cs
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\WallpaperPage.xaml.g.cs
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\OutUserPage.xaml.g.cs
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\WarningPage.xaml.g.cs
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\ScannerPage.xaml.g.cs
 C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\FeedbackPage.xaml.g.cs
+C:\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\SearchBooksApp.csproj.AssemblyReference.cache
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\bin\Debug\netstandard2.0\SearchBooksApp.deps.json
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\bin\Debug\netstandard2.0\SearchBooksApp.dll
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\bin\Debug\netstandard2.0\ref\SearchBooksApp.dll
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\bin\Debug\netstandard2.0\SearchBooksApp.pdb
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\bin\Debug\netstandard2.0\Mono.Android.dll
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\bin\Debug\netstandard2.0\Mono.Android.pdb
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\bin\Debug\netstandard2.0\Mono.Android.xml
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\SearchBooksApp.csproj.AssemblyReference.cache
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\AccountPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\BookPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\FavoriteGenresPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\FavoritePage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\FeedbackPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\HomePage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\NavigationPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\OptionsPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\OutUserPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\ProcessPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\RecomendedBooksPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\RegistrationPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\ResultsSearch.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\ScannerPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\UpdatePasswordPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\Views\AccountInfoView.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\Views\SignInView.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\Views\SignUpView.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\WallpaperPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\WarningPage.xaml.g.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\SearchBooksApp.AssemblyInfoInputs.cache
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\SearchBooksApp.AssemblyInfo.cs
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\SearchBooksApp.csproj.CoreCompileInputs.cache
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\SearchBooksApp.csproj.CopyComplete
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\SearchBooksApp.dll
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\ref\SearchBooksApp.dll
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp\obj\Debug\netstandard2.0\SearchBooksApp.pdb

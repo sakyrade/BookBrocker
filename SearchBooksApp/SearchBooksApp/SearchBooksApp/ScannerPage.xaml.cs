@@ -34,7 +34,7 @@ namespace SearchBooksApp
 
         private void OnScanBookResult(ZXing.Result result)
         {
-            Device.BeginInvokeOnMainThread(async () => await Navigation.PushAsync(new ResultsSearch(result.Text, true)));
+            Device.BeginInvokeOnMainThread(async () => await Navigation.PushAsync(new ResultsSearch(result.Text)));
         }
     }
 }

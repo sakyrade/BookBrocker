@@ -2576,3 +2576,5 @@ C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\o
 C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\stamp\_GenerateJavaStubs.stamp
 C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\stamp\_GeneratePackageManagerJava.stamp
 C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\stamp\_ResolveLibraryProjectImports.stamp
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\drawable\favorite_books_background.png
+C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\res\drawable\bottom_nav.xml

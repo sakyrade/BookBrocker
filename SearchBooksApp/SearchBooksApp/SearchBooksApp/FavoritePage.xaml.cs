@@ -59,6 +59,7 @@ namespace SearchBooksApp
                 {
                     if (Connectivity.NetworkAccess == NetworkAccess.Internet)
                     {
+                        
                         JObject response = await UsersOperations.UpdateUserData(User.Id);
 
                         if (response != null)

@@ -39,7 +39,7 @@
                         </Frame.GestureRecognizers>
                         <Grid>
                             <StackLayout>
-                                <Image Aspect="AspectFill" Source="favorite_books_user.jpg" />
+                                <Image Aspect="AspectFill" Source="favorite_books_background.jpg" />
                             </StackLayout>
                             <StackLayout Padding="20">
                                 <Label Text="Избранное" FontSize="28" TextColor="Black" FontFamily="HDR" />

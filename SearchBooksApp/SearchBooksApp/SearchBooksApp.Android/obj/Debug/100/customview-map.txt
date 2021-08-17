@@ -16,6 +16,8 @@ attr;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Andr
 background;obj\Debug\100\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\100\res\mipmap-anydpi-v26\icon_round.xml
 cache-path;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+clip-path;obj\Debug\100\res\drawable\bottom_nav.xml
+clip-path;obj\Debug\100\res\drawable\ic_launcher_foreground.xml
 color;obj\Debug\100\res\values\colors.xml
 com.google.android.material.appbar.AppBarLayout;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\49\jl\res\layout\flyoutcontent.xml
 com.google.android.material.appbar.AppBarLayout;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\49\jl\res\layout\rootlayout.xml
@@ -33,6 +35,7 @@ foreground;obj\Debug\100\res\mipmap-anydpi-v26\icon_round.xml
 FrameLayout;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\49\jl\res\layout\bottomtablayout.xml
 FrameLayout;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\54\jl\res\layout\zxingscanneractivitylayout.xml
 FrameLayout;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\54\jl\res\layout\zxingscannerfragmentlayout.xml
+group;obj\Debug\100\res\drawable\bottom_nav.xml
 group;obj\Debug\100\res\drawable\ic_launcher_foreground.xml
 item;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\47\jl\res\drawable\materialprogressbar.xml
 item;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\47\jl\res\values\styles.xml
@@ -41,6 +44,7 @@ item;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Andr
 item;obj\Debug\100\res\values\styles.xml
 layer-list;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\47\jl\res\drawable\materialprogressbar.xml
 LinearLayout;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\49\jl\res\layout\bottomtablayout.xml
+path;obj\Debug\100\res\drawable\bottom_nav.xml
 path;obj\Debug\100\res\drawable\ic_launcher_foreground.xml
 paths;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\46\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 resources;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\47\jl\res\values\styles.xml
@@ -70,6 +74,7 @@ translate;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp
 translate;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\49\jl\res\anim\enterfromright.xml
 translate;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\49\jl\res\anim\exittoleft.xml
 translate;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\49\jl\res\anim\exittoright.xml
+vector;obj\Debug\100\res\drawable\bottom_nav.xml
 vector;obj\Debug\100\res\drawable\ic_launcher_foreground.xml
 xamarin.forms.material.android.MaterialFormsEditText;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\47\jl\res\layout\textinputlayoutfilledbox.xml
 xamarin.forms.material.android.MaterialFormsTextInputLayout;C:\Xamarin Forms Projects\SearchBooksApp\SearchBooksApp\SearchBooksApp.Android\obj\Debug\100\lp\47\jl\res\layout\textinputlayoutfilledbox.xml
